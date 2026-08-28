@@ -1,6 +1,7 @@
 torch>=2.0.0
 tokenizers
 pyyaml
-datasets
+datasets[audio]
+torchcodec
 soundfile
 python-dotenv
