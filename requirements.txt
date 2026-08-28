@@ -3,3 +3,4 @@ tokenizers
 pyyaml
 datasets
 soundfile
+python-dotenv
