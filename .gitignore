@@ -13,3 +13,8 @@ corpus.txt
 # Ignore large binary weights and tokenizers (Upload these to GitHub Releases instead)
 checkpoints/*.pt
 tokenizer/*.json
+
+# Ignore environment variables and private downloader scripts
+.env
+src/download_asr.py
+run_downloader.bat
