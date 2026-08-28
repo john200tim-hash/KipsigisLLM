@@ -1,8 +1,9 @@
-block_size: 128
-vocab_size: 2000
-n_layer: 4
-n_head: 4
-n_embd: 256
-batch_size: 4
-learning_rate: 0.0003
-epochs: 5000
+block_size: 256
+vocab_size: 6000
+n_layer: 6
+n_head: 8
+n_embd: 384
+batch_size: 16
+learning_rate: 0.001
+epochs: 100
+dropout: 0.1
