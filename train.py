@@ -1,0 +1,62 @@
+import yaml
+import torch
+import hashlib
+from src.model import TinyCustomLLM
+from src.dataset import get_dataloader
+
+def get_checkpoint_sha(filepath):
+    sha256_hash = hashlib.sha256()
+    with open(filepath, "rb") as f:
+        for byte_block in iter(lambda: f.read(4096), b""):
+            sha256_hash.update(byte_block)
+    return sha256_hash.hexdigest()
+
+def main():
+    print("-> Loading Config...")
+    with open("configs/train_config.yaml", "r") as f:
+        config = yaml.safe_load(f)
+
+    print("-> Initializing Model & Data Loader...")
+    model = TinyCustomLLM(config)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=config['learning_rate'])
+
+    dataloader = get_dataloader(
+        text_path="data/processed/corpus.txt",
+        tokenizer_path="tokenizer/kipsigis_tokenizer.json",
+        block_size=config['block_size'],
+        batch_size=config['batch_size']
+    )
+
+    print(f"\n-> Starting Training Loop ({config['epochs']} Epochs / Steps)...")
+    model.train()
+    
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
+
+    # Simplified training loop mimicking the original steps
+    data_iter = iter(dataloader)
+    for step in range(config['epochs']):
+        try:
+            xb, yb = next(data_iter)
+        except StopIteration:
+            data_iter = iter(dataloader)
+            xb, yb = next(data_iter)
+            
+        xb, yb = xb.to(device), yb.to(device)
+
+        optimizer.zero_grad(set_to_none=True)
+        logits, loss = model(xb, yb)
+        loss.backward()
+        optimizer.step()
+
+        if (step + 1) % 10 == 0 or step == 0:
+            print(f"Step {step+1:02d} | Loss: {loss.item():.4f}")
+
+    ckpt_path = "checkpoints/kipsigis_model.pt"
+    torch.save(model.state_dict(), ckpt_path)
+    print(f"\n[Training Complete & Checkpoint Saved]")
+    print(f"-> File: {ckpt_path}")
+    print(f"-> Checkpoint SHA-256: {get_checkpoint_sha(ckpt_path)}")
+
+if __name__ == "__main__":
+    main()

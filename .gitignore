@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Ignore Proprietary Data
+data/raw/*
+data/processed/*
+data/datasets/*
+Datasets/
+corpus.txt

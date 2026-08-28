@@ -1,0 +1,9712 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<unk>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<pad>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": "<unk>",
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "<unk>": 0,
+      "<pad>": 1,
+      "!": 2,
+      "\"": 3,
+      "'": 4,
+      "(": 5,
+      ")": 6,
+      ",": 7,
+      "-": 8,
+      ".": 9,
+      "0": 10,
+      "1": 11,
+      "2": 12,
+      "3": 13,
+      "4": 14,
+      "5": 15,
+      "6": 16,
+      "7": 17,
+      "8": 18,
+      "9": 19,
+      ":": 20,
+      ";": 21,
+      ">": 22,
+      "?": 23,
+      "A": 24,
+      "B": 25,
+      "C": 26,
+      "D": 27,
+      "E": 28,
+      "F": 29,
+      "G": 30,
+      "H": 31,
+      "I": 32,
+      "J": 33,
+      "K": 34,
+      "L": 35,
+      "M": 36,
+      "N": 37,
+      "O": 38,
+      "P": 39,
+      "R": 40,
+      "S": 41,
+      "T": 42,
+      "U": 43,
+      "V": 44,
+      "W": 45,
+      "Y": 46,
+      "a": 47,
+      "b": 48,
+      "c": 49,
+      "d": 50,
+      "e": 51,
+      "f": 52,
+      "g": 53,
+      "h": 54,
+      "i": 55,
+      "j": 56,
+      "k": 57,
+      "l": 58,
+      "m": 59,
+      "n": 60,
+      "o": 61,
+      "p": 62,
+      "r": 63,
+      "s": 64,
+      "t": 65,
+      "u": 66,
+      "v": 67,
+      "w": 68,
+      "y": 69,
+      "z": 70,
+      "©": 71,
+      "Â": 72,
+      "È": 73,
+      "Î": 74,
+      "â": 75,
+      "Ċ": 76,
+      "č": 77,
+      "Ġ": 78,
+      "Ģ": 79,
+      "Ļ": 80,
+      "ļ": 81,
+      "Ľ": 82,
+      "ľ": 83,
+      "Ġk": 84,
+      "Ġa": 85,
+      "čĊ": 86,
+      "en": 87,
+      "Ġko": 88,
+      "et": 89,
+      "ch": 90,
+      "in": 91,
+      "Ġn": 92,
+      "Ġak": 93,
+      "Ġki": 94,
+      "on": 95,
+      "ĠK": 96,
+      "Ġt": 97,
+      "Ġb": 98,
+      "ek": 99,
+      "it": 100,
+      "Ġne": 101,
+      "Ġch": 102,
+      "an": 103,
+      "ik": 104,
+      "eng": 105,
+      "am": 106,
+      "ĠA": 107,
+      "is": 108,
+      "Ġm": 109,
+      "ot": 110,
+      "un": 111,
+      "ab": 112,
+      "ĠJ": 113,
+      "gu": 114,
+      "Ġche": 115,
+      "ar": 116,
+      "ĠJe": 117,
+      "ge": 118,
+      "go": 119,
+      "Ġbo": 120,
+      "Ġtu": 121,
+      "ind": 122,
+      "er": 123,
+      "ta": 124,
+      "ah": 125,
+      "Ġng": 126,
+      "le": 127,
+      "si": 128,
+      "ho": 129,
+      "ĠKi": 130,
+      "ĠJeho": 131,
+      "ĠJehov": 132,
+      "Ġtugu": 133,
+      "ut": 134,
+      "Ġi": 135,
+      "uk": 136,
+      "ĠJehovah": 137,
+      "ĠAk": 138,
+      "Ġeng": 139,
+      "ony": 140,
+      "ĠčĊ": 141,
+      "ny": 142,
+      "wa": 143,
+      "ya": 144,
+      "Ġtugul": 145,
+      "indet": 146,
+      "or": 147,
+      "Ġs": 148,
+      "Ġka": 149,
+      "ok": 150,
+      "Ġin": 151,
+      "amuk": 152,
+      "taindet": 153,
+      "amuktaindet": 154,
+      "la": 155,
+      "ĠN": 156,
+      "eny": 157,
+      "ĠKamuktaindet": 158,
+      "ob": 159,
+      "ye": 160,
+      "to": 161,
+      "Ġen": 162,
+      "oto": 163,
+      "il": 164,
+      "Ġkom": 165,
+      "ĠT": 166,
+      "isi": 167,
+      "at": 168,
+      "bo": 169,
+      "om": 170,
+      "Ġkw": 171,
+      "Ġbet": 172,
+      "ur": 173,
+      "ĠM": 174,
+      "Ġkole": 175,
+      "ond": 176,
+      "em": 177,
+      "yai": 178,
+      "Ġkim": 179,
+      "Ġkob": 180,
+      "chi": 181,
+      "wet": 182,
+      "ĠE": 183,
+      "iso": 184,
+      "Ġkot": 185,
+      "yi": 186,
+      "Ġage": 187,
+      "Ġany": 188,
+      "Ġmi": 189,
+      "os": 190,
+      "ĠJeiso": 191,
+      "wo": 192,
+      "Ġw": 193,
+      "yo": 194,
+      "Ġab": 195,
+      "Ġti": 196,
+      "etab": 197,
+      "Ġchi": 198,
+      "Ġanyun": 199,
+      "end": 200,
+      "ĠNo": 201,
+      "ĠNoa": 202,
+      "ei": 203,
+      "ji": 204,
+      "wek": 205,
+      "ung": 206,
+      "Ġkin": 207,
+      "Ġl": 208,
+      "Ġam": 209,
+      "ong": 210,
+      "ng": 211,
+      "Ġo": 212,
+      "Ġket": 213,
+      "ak": 214,
+      "ech": 215,
+      "ĠB": 216,
+      "ĠS": 217,
+      "el": 218,
+      "Ġye": 219,
+      "gei": 220,
+      "Ġwer": 221,
+      "Ġkip": 222,
+      "es": 223,
+      "isiek": 224,
+      "as": 225,
+      "ib": 226,
+      "Ġag": 227,
+      "ito": 228,
+      "siek": 229,
+      "len": 230,
+      "Ġ\"": 231,
+      "gol": 232,
+      "sich": 233,
+      "seng": 234,
+      "oni": 235,
+      "Ġsob": 236,
+      "endet": 237,
+      "sengwet": 238,
+      "Ġbetut": 239,
+      "and": 240,
+      "Ġich": 241,
+      "Ġinendet": 242,
+      "eb": 243,
+      "eek": 244,
+      "ir": 245,
+      "ĠI": 246,
+      "Ġsi": 247,
+      "lak": 248,
+      "Ġkor": 249,
+      "ai": 250,
+      "Ġu": 251,
+      "ing": 252,
+      "wan": 253,
+      "Ġkeny": 254,
+      "Ġkig": 255,
+      "ikab": 256,
+      "Ġago": 257,
+      "ĠKa": 258,
+      "any": 259,
+      "engek": 260,
+      "lenji": 261,
+      "Ġnebo": 262,
+      "aran": 263,
+      "Ġan": 264,
+      "Ġso": 265,
+      "Ġlo": 266,
+      "ondo": 267,
+      "elit": 268,
+      "us": 269,
+      "Ġor": 270,
+      "Ġkar": 271,
+      "Ġkony": 272,
+      "Ġbeek": 273,
+      "oton": 274,
+      "aret": 275,
+      "wog": 276,
+      "Ch": 277,
+      "Ġma": 278,
+      "Ġmelit": 279,
+      "Ġbetu": 280,
+      "al": 281,
+      "im": 282,
+      "oi": 283,
+      "âĢ": 284,
+      "ĠKo": 285,
+      "ĠAd": 286,
+      "ĠEn": 287,
+      "yik": 288,
+      "ang": 289,
+      "nyi": 290,
+      "âĢĻ": 291,
+      "Ġkon": 292,
+      "Ġkit": 293,
+      "Ġtis": 294,
+      "geny": 295,
+      "ugu": 296,
+      "ĠL": 297,
+      "choto": 298,
+      "Ġkenyisiek": 299,
+      "ĠAdam": 300,
+      "Ġker": 301,
+      "Ġkos": 302,
+      "Ġim": 303,
+      "Ġmie": 304,
+      ".\"": 305,
+      "ĠH": 306,
+      "Ġr": 307,
+      "Ġchito": 308,
+      "anyi": 309,
+      "Ġbogol": 310,
+      "ilil": 311,
+      "Ġamu": 312,
+      "wogik": 313,
+      "ĠCh": 314,
+      "Ġkok": 315,
+      "Ġtar": 316,
+      "enge": 317,
+      "ĠTengek": 318,
+      "Ġkik": 319,
+      "Ġchichoto": 320,
+      "Ġbetusiek": 321,
+      "uit": 322,
+      "Ġar": 323,
+      "geer": 324,
+      "ĠKim": 325,
+      "ĠKip": 326,
+      "Ġkipsengwet": 327,
+      "Ġtisab": 328,
+      "Ġtarit": 329,
+      "gis": 330,
+      "yan": 331,
+      "Ġke": 332,
+      "ukuit": 333,
+      "ĠTilil": 334,
+      "Ġagenge": 335,
+      "wok": 336,
+      "ĠY": 337,
+      "ennyi": 338,
+      "Ġmb": 339,
+      "Ġkimwa": 340,
+      "ĠBukuit": 341,
+      "yet": 342,
+      "yot": 343,
+      "ĠP": 344,
+      "Ġem": 345,
+      "Ġkoyai": 346,
+      "aman": 347,
+      "guur": 348,
+      "ger": 349,
+      "Ġtuguk": 350,
+      "Ġing": 351,
+      "Ġkome": 352,
+      "uren": 353,
+      "ata": 354,
+      "egei": 355,
+      "ren": 356,
+      "Ġaeng": 357,
+      "Ġalak": 358,
+      "Ġkisich": 359,
+      "ĠAm": 360,
+      "lel": 361,
+      "wak": 362,
+      "Ġkain": 363,
+      "Ġichek": 364,
+      "Ġlogo": 365,
+      "tab": 366,
+      "Ġnoto": 367,
+      "Ġbar": 368,
+      "oti": 369,
+      "geind": 370,
+      "ĠKaen": 371,
+      "ugul": 372,
+      "ĠO": 373,
+      "Ġasi": 374,
+      "chin": 375,
+      "iny": 376,
+      "Ġkiy": 377,
+      "Ġtaman": 378,
+      "Ġbi": 379,
+      "Ġbor": 380,
+      "Ġkago": 381,
+      "Ġtiong": 382,
+      "Ġkingo": 383,
+      "Ġole": 384,
+      "Ġketit": 385,
+      "Ġkergeind": 386,
+      "guure": 387,
+      "ala": 388,
+      "Ġya": 389,
+      "Ġkiyai": 390,
+      "toi": 391,
+      "ga": 392,
+      "Ġkab": 393,
+      "Ġkong": 394,
+      "inye": 395,
+      "Ġako": 396,
+      "ĠKit": 397,
+      "ityo": 398,
+      "indo": 399,
+      "Ġngw": 400,
+      "Ġkwondo": 401,
+      "aranet": 402,
+      "Ġanan": 403,
+      "Ġlogoek": 404,
+      "ug": 405,
+      "ikyik": 406,
+      "unet": 407,
+      "Ġchebo": 408,
+      "Ġii": 409,
+      "Ġkaat": 410,
+      "enyin": 411,
+      "obe": 412,
+      "obo": 413,
+      "ĠEd": 414,
+      "ĠKipsengwet": 415,
+      "ach": 416,
+      "ep": 417,
+      "iit": 418,
+      "pch": 419,
+      "Ġla": 420,
+      "Ġlak": 421,
+      "ĠAb": 422,
+      "gor": 423,
+      "ild": 424,
+      "Ġkipk": 425,
+      "ĠIn": 426,
+      "',": 427,
+      "tind": 428,
+      "Ġkolenji": 429,
+      "Ġkogeny": 430,
+      "ĠAwa": 431,
+      "Ġmaranet": 432,
+      "ĠNg": 433,
+      "ĠYe": 434,
+      "tindoni": 435,
+      "de": 436,
+      "ol": 437,
+      "Ġkou": 438,
+      "Ġkib": 439,
+      "onok": 440,
+      "Ġmis": 441,
+      "uny": 442,
+      "Ġsom": 443,
+      "Ġkwen": 444,
+      "Ġkwond": 445,
+      "Ġkiga": 446,
+      "Ġbarak": 447,
+      "Ġbiik": 448,
+      "Ġsomok": 449,
+      "ap": 450,
+      "yok": 451,
+      "Ġach": 452,
+      "Ġkoi": 453,
+      "Ġkoek": 454,
+      "Ġkir": 455,
+      "Ġkiik": 456,
+      "Ġta": 457,
+      "itab": 458,
+      "Ġmut": 459,
+      "Ġkomugul": 460,
+      "Ġkwo": 461,
+      "Ġkobiit": 462,
+      "Ġtiony": 463,
+      "Ġagoi": 464,
+      "Ġagobo": 465,
+      "anywa": 466,
+      "Ġtaritik": 467,
+      "osiek": 468,
+      "ub": 469,
+      "Ġis": 470,
+      "Ġkem": 471,
+      "Ġkoto": 472,
+      "Ġkosich": 473,
+      "inwek": 474,
+      "Ġakobo": 475,
+      "Ġkiek": 476,
+      "ĠKisi": 477,
+      "Ġtai": 478,
+      "ĠAng": 479,
+      "ote": 480,
+      "gok": 481,
+      "Ġiam": 482,
+      "Ġinye": 483,
+      "ĠNe": 484,
+      "Ġyeityo": 485,
+      "Ġwerikab": 486,
+      "Ġkosk": 487,
+      "ia": 488,
+      "pt": 489,
+      "ud": 490,
+      "uch": 491,
+      "wech": 492,
+      "yuk": 493,
+      "Ġe": 494,
+      "Ġkol": 495,
+      "cham": 496,
+      "Ġme": 497,
+      "ero": 498,
+      "wat": 499,
+      "yat": 500,
+      "oret": 501,
+      "wochi": 502,
+      "Ġol": 503,
+      "Ġketik": 504,
+      "echen": 505,
+      "Ġsobei": 506,
+      "anda": 507,
+      "alek": 508,
+      "ĠKolenji": 509,
+      "Ġara": 510,
+      "Ġtamanwogik": 511,
+      "ĠEden": 512,
+      "Ġkipkoi": 513,
+      "git": 514,
+      "iet": 515,
+      "og": 516,
+      "oun": 517,
+      "pk": 518,
+      "yon": 519,
+      "Ġy": 520,
+      "Ġngor": 521,
+      "Ġkiit": 522,
+      "Ġtinye": 523,
+      "une": 524,
+      "uni": 525,
+      "Ġtuwan": 526,
+      "utik": 527,
+      "utegei": 528,
+      "tos": 529,
+      "ĠMar": 530,
+      "Ġkima": 531,
+      "Ġkararan": 532,
+      "Ġmbar": 533,
+      "Ġmbaret": 534,
+      "ĠAbil": 535,
+      "..": 536,
+      "ET": 537,
+      "ag": 538,
+      "get": 539,
+      "op": 540,
+      "uutegei": 541,
+      "yom": 542,
+      "Ġit": 543,
+      "Ġkam": 544,
+      "Ġang": 545,
+      "Ġkobo": 546,
+      "che": 547,
+      "Ġnd": 548,
+      "Ġkii": 549,
+      "Ġkiguure": 550,
+      "ami": 551,
+      "isto": 552,
+      "unu": 553,
+      "ĠJos": 554,
+      "gochi": 555,
+      "Ġtuga": 556,
+      "eru": 557,
+      "utab": 558,
+      "yal": 559,
+      "Ġkag": 560,
+      "ĠMa": 561,
+      "ĠMet": 562,
+      "ondoni": 563,
+      "Ġkimi": 564,
+      "Ġlet": 565,
+      "Ġsobet": 566,
+      "Ġichuutegei": 567,
+      "Ġkaron": 568,
+      "Ġkipsengwetisiek": 569,
+      "wokik": 570,
+      "Ġemet": 571,
+      "Ġkergeindanywa": 572,
+      "tindoniondoni": 573,
+      "Ġkwondanyi": 574,
+      "ĠAngot": 575,
+      "ĠJosep": 576,
+      "19": 577,
+      "20": 578,
+      "for": 579,
+      "mi": 580,
+      "Ġ1": 581,
+      "ĠG": 582,
+      "Ġot": 583,
+      "Ġfor": 584,
+      "Ġkut": 585,
+      "Ġkur": 586,
+      "Ġale": 587,
+      "Ġkowek": 588,
+      "Ġkiib": 589,
+      "ĠKin": 590,
+      "Ġtengek": 591,
+      "Ġbik": 592,
+      "iten": 593,
+      "Ġmeng": 594,
+      "ĠKich": 595,
+      "Ġkomwa": 596,
+      "Ġkwand": 597,
+      "Ġtib": 598,
+      "ĠBib": 599,
+      "ĠSem": 600,
+      "Ġwerik": 601,
+      "ebe": 602,
+      "ĠChild": 603,
+      "ĠKimwa": 604,
+      "Ġinguni": 605,
+      "Ġkoigeny": 606,
+      "Ġtinyei": 607,
+      "ĠMaria": 608,
+      "yomis": 609,
+      "Ġndaret": 610,
+      "wokikyuk": 611,
+      "ĠBible": 612,
+      "ĠChildren": 613,
+      ",\"": 614,
+      "ber": 615,
+      "ila": 616,
+      "lam": 617,
+      "sing": 618,
+      "Ġkes": 619,
+      "Ġkoam": 620,
+      "inet": 621,
+      "Ġkicham": 622,
+      "ĠAs": 623,
+      "arta": 624,
+      "ĠKii": 625,
+      "nyu": 626,
+      "wai": 627,
+      "Ġkomi": 628,
+      "Ġking": 629,
+      "ĠSet": 630,
+      "Ġsogol": 631,
+      "Ġkitar": 632,
+      "ĠLa": 633,
+      "Ġiman": 634,
+      "Ġkoki": 635,
+      "chinet": 636,
+      "ĠIngo": 637,
+      "Ġmengechen": 638,
+      "aik": 639,
+      "bata": 640,
+      "mo": 641,
+      "ptos": 642,
+      "tam": 643,
+      "yoni": 644,
+      "Ġ(": 645,
+      "Ġalam": 646,
+      "Ġkoyok": 647,
+      "ine": 648,
+      "Ġnoton": 649,
+      "Ġnyal": 650,
+      "Ġkiya": 651,
+      "Ġkitoi": 652,
+      "anas": 653,
+      "amek": 654,
+      "Ġmo": 655,
+      "Ġtul": 656,
+      "Ġtuwai": 657,
+      "Ġib": 658,
+      "omi": 659,
+      "Ġkoboto": 660,
+      "Ġkote": 661,
+      "Ġketoto": 662,
+      "Ġsobondo": 663,
+      "Ġkora": 664,
+      "Ġsoet": 665,
+      "ĠLamek": 666,
+      "ĠHam": 667,
+      "Ġartam": 668,
+      "ĠAmu": 669,
+      "inyin": 670,
+      "achen": 671,
+      "Ġlagok": 672,
+      "Ġlakwet": 673,
+      "Ġmissing": 674,
+      "unyek": 675,
+      "Ġkwenutab": 676,
+      "Ġisobe": 677,
+      "Ġkoskol": 678,
+      "Ġarawet": 679,
+      "Ġtibik": 680,
+      "UN": 681,
+      "age": 682,
+      "ato": 683,
+      "ben": 684,
+      "egu": 685,
+      "ich": 686,
+      "tinwek": 687,
+      "we": 688,
+      "Ġkoik": 689,
+      "inem": 690,
+      "ĠKan": 691,
+      "Ġbek": 692,
+      "ĠAgo": 693,
+      "isye": 694,
+      "Ġman": 695,
+      "aban": 696,
+      "ĠJap": 697,
+      "ĠJud": 698,
+      "Ġtupch": 699,
+      "indab": 700,
+      "indoi": 701,
+      "ĠKib": 702,
+      "ĠKiim": 703,
+      "Ġiyoni": 704,
+      "oru": 705,
+      "oron": 706,
+      "Ġkai": 707,
+      "Ġkayomis": 708,
+      "Ġkomos": 709,
+      "Ġkwony": 710,
+      "Ġkimur": 711,
+      "Ġwerikyik": 712,
+      "esun": 713,
+      "asis": 714,
+      "Ġagine": 715,
+      "Ġsoptos": 716,
+      "Ġortinwek": 717,
+      "Ġkonyek": 718,
+      "ĠEnok": 719,
+      "Ġkosob": 720,
+      "Ġkomee": 721,
+      "Ġkagosich": 722,
+      "Ġkingobata": 723,
+      "alal": 724,
+      "Ġmeet": 725,
+      "Ġkoskoleny": 726,
+      "ĠKanan": 727,
+      "ĠJapet": 728,
+      "gas": 729,
+      "ien": 730,
+      "igu": 731,
+      "son": 732,
+      "sta": 733,
+      "um": 734,
+      "wong": 735,
+      "ĠW": 736,
+      "Ġyi": 737,
+      "Ġos": 738,
+      "Ġainet": 739,
+      "Ġkogeer": 740,
+      "etero": 741,
+      "chen": 742,
+      "Ġkito": 743,
+      "Ġkiyo": 744,
+      "Ġkiim": 745,
+      "Ġkigeer": 746,
+      "ĠKik": 747,
+      "ĠKom": 748,
+      "itu": 749,
+      "Ġchang": 750,
+      "ĠAr": 751,
+      "Ġmuren": 752,
+      "otik": 753,
+      "unoto": 754,
+      "unetab": 755,
+      "ges": 756,
+      "goi": 757,
+      "Ġboisi": 758,
+      "eret": 759,
+      "erur": 760,
+      "ĠKiwo": 761,
+      "ĠKiguure": 762,
+      "Ġiyot": 763,
+      "ori": 764,
+      "Ġsisi": 765,
+      "enyun": 766,
+      "ĠTa": 767,
+      "ĠMami": 768,
+      "Ġkobot": 769,
+      "Ġkobata": 770,
+      "Ġmiachen": 771,
+      "wowech": 772,
+      "Ġtim": 773,
+      "endote": 774,
+      "Ġamit": 775,
+      "Ġwerinyin": 776,
+      "andan": 777,
+      "eekyi": 778,
+      "Ġano": 779,
+      "Ġorit": 780,
+      "Ġkaras": 781,
+      "Ġbetusi": 782,
+      "Ġimb": 783,
+      "Ġra": 784,
+      "geero": 785,
+      "ĠPetero": 786,
+      "Ġkainennyi": 787,
+      "Ġborwek": 788,
+      "toiyot": 789,
+      "Ġmising": 790,
+      "Ġiame": 791,
+      "Ġkolos": 792,
+      "Ġoloto": 793,
+      "Ġkeswek": 794,
+      "Ġalamala": 795,
+      "Ġkiyaak": 796,
+      "Ġkomostab": 797,
+      "Ġkimurtoiyot": 798,
+      "Ġsisiit": 799,
+      "CH": 800,
+      "do": 801,
+      "ela": 802,
+      "eyai": 803,
+      "egis": 804,
+      "han": 805,
+      "ne": 806,
+      "ohan": 807,
+      "weekyi": 808,
+      "yin": 809,
+      "ĠR": 810,
+      "Ġom": 811,
+      "Ġga": 812,
+      "Ġatindoniondoni": 813,
+      "ennyu": 814,
+      "innyi": 815,
+      "Ġnyi": 816,
+      "Ġkiger": 817,
+      "onoto": 818,
+      "Ġtah": 819,
+      "Ġtoret": 820,
+      "itit": 821,
+      "Ġneb": 822,
+      "Ġchu": 823,
+      "Ġcham": 824,
+      "isy": 825,
+      "uno": 826,
+      "unek": 827,
+      "abu": 828,
+      "ĠJohan": 829,
+      "Ġchept": 830,
+      "goito": 831,
+      "ĠKiib": 832,
+      "ĠKiing": 833,
+      "utiet": 834,
+      "onyo": 835,
+      "Ġinyo": 836,
+      "Ġinoni": 837,
+      "Ġkomwowech": 838,
+      "ĠTien": 839,
+      "Ġbetunoto": 840,
+      "Ġkotun": 841,
+      "Ġkoteb": 842,
+      "Ġamat": 843,
+      "ngen": 844,
+      "Ġwerit": 845,
+      "ĠIm": 846,
+      "ĠIngen": 847,
+      "Ġoritab": 848,
+      "Ġkonyo": 849,
+      "ĠHero": 850,
+      "Ġrir": 851,
+      "ĠTengekto": 852,
+      "Ġkikuren": 853,
+      "yanj": 854,
+      "ĠPat": 855,
+      "Ġkainetab": 856,
+      "otiond": 857,
+      "ĠKitar": 858,
+      "uget": 859,
+      "Ġlakw": 860,
+      "Ġkirgit": 861,
+      "Ġkotoy": 862,
+      "yone": 863,
+      "Ġyoton": 864,
+      "open": 865,
+      "ĠMetus": 866,
+      "Ġnyalild": 867,
+      "Ġtulonok": 868,
+      "Ġboision": 869,
+      "Ġtimin": 870,
+      "Ġgaa": 871,
+      "Ġtahabu": 872,
+      "ĠJohana": 873,
+      "ĠKiingen": 874,
+      "ĠHerod": 875,
+      ")!": 876,
+      "13": 877,
+      "14": 878,
+      "AUN": 879,
+      "ND": 880,
+      "UK": 881,
+      "bun": 882,
+      "gi": 883,
+      "hen": 884,
+      "hes": 885,
+      "ii": 886,
+      "ip": 887,
+      "iw": 888,
+      "iyo": 889,
+      "kony": 890,
+      "oisi": 891,
+      "olen": 892,
+      "oyet": 893,
+      "re": 894,
+      "tang": 895,
+      "tegis": 896,
+      "up": 897,
+      "uu": 898,
+      "ww": 899,
+      "war": 900,
+      "Â©": 901,
+      "Ġik": 902,
+      "Ġind": 903,
+      "Ġong": 904,
+      "ĠÂ©": 905,
+      "Ġkamuktaindet": 906,
+      "Ġkeb": 907,
+      "Ġkuren": 908,
+      "Ġayan": 909,
+      "Ġategis": 910,
+      "Ġkosi": 911,
+      "Ġkoya": 912,
+      "etugul": 913,
+      "choton": 914,
+      "Ġni": 915,
+      "Ġnek": 916,
+      "Ġnyanj": 917,
+      "ona": 918,
+      "onech": 919,
+      "ĠKI": 920,
+      "ĠKw": 921,
+      "ĠKok": 922,
+      "ĠKing": 923,
+      "ĠKonyo": 924,
+      "Ġto": 925,
+      "Ġbany": 926,
+      "ektab": 927,
+      "ith": 928,
+      "Ġnelel": 929,
+      "amin": 930,
+      "ĠAla": 931,
+      "ĠAtindoni": 932,
+      "ĠAtindoniondoni": 933,
+      "Ġmenyin": 934,
+      "Ġmesun": 935,
+      "otin": 936,
+      "otikab": 937,
+      "aboyet": 938,
+      "ĠJE": 939,
+      "Ġchemi": 940,
+      "Ġbol": 941,
+      "eretab": 942,
+      "erson": 943,
+      "Ġnganas": 944,
+      "sigis": 945,
+      "ĠKiyai": 946,
+      "uto": 947,
+      "utunetab": 948,
+      "Ġil": 949,
+      "Ġile": 950,
+      "Ġial": 951,
+      "Ġiyan": 952,
+      "org": 953,
+      "Ġsos": 954,
+      "Ġinai": 955,
+      "Ġinegei": 956,
+      "Ġinyon": 957,
+      "Ġinne": 958,
+      "laik": 959,
+      "ĠNgol": 960,
+      "ĠNyone": 961,
+      "togis": 962,
+      "ĠToret": 963,
+      "ĠTAUN": 964,
+      "ati": 965,
+      "oman": 966,
+      "ĠMel": 967,
+      "ĠEe": 968,
+      "Ġanyor": 969,
+      "Ġwww": 970,
+      "yoe": 971,
+      "endi": 972,
+      "endoti": 973,
+      "eiyet": 974,
+      "jiren": 975,
+      "Ġlaboyet": 976,
+      "Ġoam": 977,
+      "ĠBoisi": 978,
+      "ĠSoman": 979,
+      "eshen": 980,
+      "Ġagetugul": 981,
+      "Ġsobenyun": 982,
+      "Ġicheru": 983,
+      "ebet": 984,
+      "Ġkororon": 985,
+      "Ġkenyoru": 986,
+      "Ġkigi": 987,
+      "Ġane": 988,
+      "Ġsog": 989,
+      "uswek": 990,
+      "Ġoret": 991,
+      "Ġkonyil": 992,
+      "Ġkonyoun": 993,
+      "Chutunetab": 994,
+      "Ġmag": 995,
+      "Ġmache": 996,
+      "Ġmalaik": 997,
+      "ĠKoyoe": 998,
+      "ĠEnos": 999,
+      "ĠLeshen": 1000,
+      "Ġimwochi": 1001,
+      "Ġmieindab": 1002,
+      "ĠHug": 1003,
+      "ĠChebet": 1004,
+      "Ġkokonech": 1005,
+      "ĠTengekwogik": 1006,
+      "ĠTengekwokikyuk": 1007,
+      "ĠTengektang": 1008,
+      "Ġkikeyai": 1009,
+      "ĠKipsigis": 1010,
+      "wokikab": 1011,
+      "Ġkomechi": 1012,
+      "ĠAmen": 1013,
+      "ĠAmat": 1014,
+      "Ġbara": 1015,
+      "Ġasibun": 1016,
+      "Ġborto": 1017,
+      "Ġborori": 1018,
+      "Ġkergeindanyi": 1019,
+      "Ġyachen": 1020,
+      "Ġkabus": 1021,
+      "ĠEdwar": 1022,
+      "pchei": 1023,
+      "Ġlapk": 1024,
+      "ĠInc": 1025,
+      "ĠNgw": 1026,
+      "deito": 1027,
+      "Ġisom": 1028,
+      "Ġkemi": 1029,
+      "Ġkemoi": 1030,
+      "ĠKisiben": 1031,
+      "ĠKisire": 1032,
+      "Ġkoskolen": 1033,
+      "alekuk": 1034,
+      "Ġmbaretab": 1035,
+      "...": 1036,
+      "Ġitond": 1037,
+      "ĠMetindoi": 1038,
+      "1914": 1039,
+      "2020": 1040,
+      "Ġ119": 1041,
+      "Ġkureretab": 1042,
+      "Ġtengekwokikyuk": 1043,
+      "ĠKicheru": 1044,
+      "Ġkwandab": 1045,
+      "Ġkichamin": 1046,
+      "ĠAsamin": 1047,
+      "artat": 1048,
+      "ĠLagok": 1049,
+      "Ġimanit": 1050,
+      "ĠJudith": 1051,
+      "stair": 1052,
+      "Ġkitomo": 1053,
+      "Ġkiyoech": 1054,
+      "ĠKiwole": 1055,
+      "ĠTaunet": 1056,
+      "Ġamitwogik": 1057,
+      "Ġkolosunet": 1058,
+      "Ġalamalaik": 1059,
+      "Ġomeng": 1060,
+      "Ġnebunu": 1061,
+      "Ġchamchinet": 1062,
+      "Ġinyoiw": 1063,
+      "ĠTienwokikab": 1064,
+      "ĠPaterson": 1065,
+      "Ġlakweng": 1066,
+      "openu": 1067,
+      "Ġboisionikyik": 1068,
+      "130": 1069,
+      "konyoun": 1070,
+      "Ġikopenu": 1071,
+      "Ġayani": 1072,
+      "Ġategisin": 1073,
+      "ĠKokonok": 1074,
+      "Ġbanyek": 1075,
+      "ĠAlastair": 1076,
+      "ĠAtindoniot": 1077,
+      "Ġmesundeito": 1078,
+      "Ġialde": 1079,
+      "Ġsosom": 1080,
+      "ĠNgolyot": 1081,
+      "ĠToreton": 1082,
+      "ĠTAUNET": 1083,
+      "ĠMelektab": 1084,
+      "jirenik": 1085,
+      "ĠBoisien": 1086,
+      "ĠLeshenit": 1087,
+      "ĠHughes": 1088,
+      "Ġbororiosiek": 1089,
+      "ĠEdward": 1090,
+      "Ġlapkeiyet": 1091,
+      "Ġinyoiwon": 1092,
+      "?\"": 1093,
+      "AI": 1094,
+      "IS": 1095,
+      "OR": 1096,
+      "ae": 1097,
+      "ael": 1098,
+      "da": 1099,
+      "det": 1100,
+      "ee": 1101,
+      "eit": 1102,
+      "esi": 1103,
+      "gan": 1104,
+      "kwa": 1105,
+      "oik": 1106,
+      "rek": 1107,
+      "Ġ2": 1108,
+      "Ġ3": 1109,
+      "ĠD": 1110,
+      "ĠU": 1111,
+      "Ġle": 1112,
+      "enan": 1113,
+      "Ġkoib": 1114,
+      "Ġkoger": 1115,
+      "Ġkogochi": 1116,
+      "inik": 1117,
+      "Ġkile": 1118,
+      "Ġkilenji": 1119,
+      "onji": 1120,
+      "ĠKus": 1121,
+      "ĠKenan": 1122,
+      "Ġtor": 1123,
+      "Ġtog": 1124,
+      "itei": 1125,
+      "ikyi": 1126,
+      "ĠAK": 1127,
+      "isyet": 1128,
+      "Ġmat": 1129,
+      "Ġmami": 1130,
+      "ĠJaret": 1131,
+      "guren": 1132,
+      "gutab": 1133,
+      "ara": 1134,
+      "Ġnguno": 1135,
+      "Ġiyai": 1136,
+      "orunet": 1137,
+      "Ġsor": 1138,
+      "Ġkas": 1139,
+      "Ġkakwa": 1140,
+      "okyin": 1141,
+      "Ġingo": 1142,
+      "yes": 1143,
+      "Ġkomwochi": 1144,
+      "ĠTam": 1145,
+      "atet": 1146,
+      "boi": 1147,
+      "emei": 1148,
+      "ĠEN": 1149,
+      "Ġkotes": 1150,
+      "Ġtir": 1151,
+      "esage": 1152,
+      "Ġagot": 1153,
+      "Ġkorob": 1154,
+      "ĠKain": 1155,
+      "anyin": 1156,
+      "Ġoretab": 1157,
+      "Ġkonom": 1158,
+      "Ġkonai": 1159,
+      "Ġkiteb": 1160,
+      "Ġru": 1161,
+      "ĠChu": 1162,
+      "Ġkeam": 1163,
+      "gerge": 1164,
+      "ĠOgeero": 1165,
+      "alalel": 1166,
+      "obegu": 1167,
+      "Ġkirer": 1168,
+      "Ġtaitab": 1169,
+      "udik": 1170,
+      "Ġeut": 1171,
+      "istoen": 1172,
+      "ĠMaalalel": 1173,
+      "Ġotesage": 1174,
+      "ĠKingo": 1175,
+      "Ġtengekto": 1176,
+      "inemune": 1177,
+      "ĠKiba": 1178,
+      "Ġkayomiset": 1179,
+      "Ġortinwekwak": 1180,
+      "iguk": 1181,
+      "ĠWer": 1182,
+      "Ġkobotok": 1183,
+      "Ġimbar": 1184,
+      "Ġtoreti": 1185,
+      "Ġkotebi": 1186,
+      "ĠMetusela": 1187,
+      "Ġnyalilda": 1188,
+      "iiye": 1189,
+      "Ġindaret": 1190,
+      "ĠKwondo": 1191,
+      "Ġboldet": 1192,
+      "Ġbaragutab": 1193,
+      "esio": 1194,
+      "!\"": 1195,
+      "'.": 1196,
+      "';": 1197,
+      "16": 1198,
+      "Ka": 1199,
+      "aet": 1200,
+      "ale": 1201,
+      "aanda": 1202,
+      "eet": 1203,
+      "echi": 1204,
+      "eiso": 1205,
+      "gisi": 1206,
+      "id": 1207,
+      "ion": 1208,
+      "ichi": 1209,
+      "jeiso": 1210,
+      "los": 1211,
+      "ma": 1212,
+      "mir": 1213,
+      "ogis": 1214,
+      "oche": 1215,
+      "rat": 1216,
+      "sei": 1217,
+      "ter": 1218,
+      "tok": 1219,
+      "uuny": 1220,
+      "wot": 1221,
+      "wer": 1222,
+      "yam": 1223,
+      "yum": 1224,
+      "zar": 1225,
+      "Ġony": 1226,
+      "Ġok": 1227,
+      "Ġisi": 1228,
+      "Ġlel": 1229,
+      "Ġjeiso": 1230,
+      "Ġkech": 1231,
+      "Ġas": 1232,
+      "eni": 1233,
+      "enen": 1234,
+      "Ġkow": 1235,
+      "Ġkoch": 1236,
+      "Ġkoit": 1237,
+      "Ġkola": 1238,
+      "chu": 1239,
+      "Ġnjirenik": 1240,
+      "Ġnaet": 1241,
+      "Ġkis": 1242,
+      "Ġkich": 1243,
+      "Ġkiang": 1244,
+      "onon": 1245,
+      "onut": 1246,
+      "onindo": 1247,
+      "ĠKA": 1248,
+      "ĠKab": 1249,
+      "ĠKito": 1250,
+      "Ġter": 1251,
+      "Ġbunu": 1252,
+      "Ġneo": 1253,
+      "Ġchek": 1254,
+      "Ġchor": 1255,
+      "Ġchoto": 1256,
+      "ista": 1257,
+      "Ġming": 1258,
+      "Ġmugu": 1259,
+      "Ġmobegu": 1260,
+      "unny": 1261,
+      "unoton": 1262,
+      "Ġchem": 1263,
+      "erech": 1264,
+      "erunek": 1265,
+      "tai": 1266,
+      "Ġngwek": 1267,
+      "ĠKiit": 1268,
+      "ĠKilenji": 1269,
+      "Ġiweekyi": 1270,
+      "ĠAko": 1271,
+      "indetab": 1272,
+      "Ġsuswek": 1273,
+      "Ġserunek": 1274,
+      "Ġkaam": 1275,
+      "Ġkaag": 1276,
+      "Ġkatok": 1277,
+      "enywan": 1278,
+      "yei": 1279,
+      "Ġkomut": 1280,
+      "Ġkomonut": 1281,
+      "ĠTos": 1282,
+      "atin": 1283,
+      "Ġkwong": 1284,
+      "ĠMi": 1285,
+      "Ġkimong": 1286,
+      "Ġkobut": 1287,
+      "Ġkobwa": 1288,
+      "Ġkobat": 1289,
+      "chigei": 1290,
+      "Ġkotu": 1291,
+      "Ġkotebe": 1292,
+      "osobe": 1293,
+      "Ġchichoton": 1294,
+      "Ġkinae": 1295,
+      "Ġamet": 1296,
+      "Ġamun": 1297,
+      "Ġketikab": 1298,
+      "ĠBet": 1299,
+      "Ġweriguk": 1300,
+      "Ġbetutab": 1301,
+      "irmir": 1302,
+      "ĠImi": 1303,
+      "Ġkorib": 1304,
+      "Ġkorotikab": 1305,
+      "aim": 1306,
+      "anyor": 1307,
+      "anywan": 1308,
+      "Ġsoetab": 1309,
+      "usyi": 1310,
+      "Ġkonyor": 1311,
+      "Ġmata": 1312,
+      "imit": 1313,
+      "Ġkonam": 1314,
+      "Ġkonde": 1315,
+      "Ġkergei": 1316,
+      "ĠChuto": 1317,
+      "ĠKimok": 1318,
+      "Ġkewet": 1319,
+      "ĠYa": 1320,
+      "Ġingen": 1321,
+      "Ġingot": 1322,
+      "atai": 1323,
+      "leld": 1324,
+      "Ġkainaik": 1325,
+      "ĠOiiye": 1326,
+      "chini": 1327,
+      "Ġkagochin": 1328,
+      "Ġketitab": 1329,
+      "Ġngwony": 1330,
+      "ache": 1331,
+      "Ġkipkosobe": 1332,
+      "Ġkwenunny": 1333,
+      "Ġtaunet": 1334,
+      "ubal": 1335,
+      "inwekwak": 1336,
+      "ĠKisich": 1337,
+      "alekab": 1338,
+      "pkeit": 1339,
+      "Ġyoto": 1340,
+      "Ġkamet": 1341,
+      "Ġkiigochi": 1342,
+      "Ġkagich": 1343,
+      "Ġotwog": 1344,
+      "Ġkiiberur": 1345,
+      "ĠAsur": 1346,
+      "ĠLazar": 1347,
+      "ĠIngob": 1348,
+      "eguk": 1349,
+      "Ġmanong": 1350,
+      "Ġmanag": 1351,
+      "ĠKiimut": 1352,
+      "Ġkaiyai": 1353,
+      "Ġkayomisennyu": 1354,
+      "Ġkwonyik": 1355,
+      "Ġkonyekwak": 1356,
+      "Ġyiei": 1357,
+      "Ġyiemei": 1358,
+      "Ġkiimuuny": 1359,
+      "ĠKomwa": 1360,
+      "Ġkarasato": 1361,
+      "Ġbetusiech": 1362,
+      "Ġbetusieguk": 1363,
+      "Ġcheptug": 1364,
+      "Ġriret": 1365,
+      "otiondennyi": 1366,
+      "iyogei": 1367,
+      "Ġkebar": 1368,
+      "Ġkosiir": 1369,
+      "Ġkoyatogis": 1370,
+      "Ġnyanjosiek": 1371,
+      "Ġsogek": 1372,
+      "Ġkabusetab": 1373,
+      "Ġbororiosiekwak": 1374,
+      "Ġtogeng": 1375,
+      "Ġsorun": 1376,
+      "Ġkakwautik": 1377,
+      "okyingei": 1378,
+      "yesyo": 1379,
+      "Ġokwek": 1380,
+      "Ġlelut": 1381,
+      "Ġmuguleld": 1382,
+      "Ġiweekyige": 1383,
+      "Ġkwenunnyo": 1384,
+      "Ġkagichub": 1385,
+      "ĠLazarus": 1386,
+      "AH": 1387,
+      "ECH": 1388,
+      "HO": 1389,
+      "IK": 1390,
+      "Kak": 1391,
+      "OB": 1392,
+      "Ob": 1393,
+      "TO": 1394,
+      "UG": 1395,
+      "VAH": 1396,
+      "YAI": 1397,
+      "aam": 1398,
+      "ele": 1399,
+      "elel": 1400,
+      "egit": 1401,
+      "eget": 1402,
+      "gona": 1403,
+      "gartat": 1404,
+      "ietab": 1405,
+      "jin": 1406,
+      "kotik": 1407,
+      "lis": 1408,
+      "lot": 1409,
+      "lji": 1410,
+      "mb": 1411,
+      "my": 1412,
+      "men": 1413,
+      "nge": 1414,
+      "nger": 1415,
+      "natet": 1416,
+      "opch": 1417,
+      "ron": 1418,
+      "ris": 1419,
+      "rus": 1420,
+      "riet": 1421,
+      "set": 1422,
+      "tan": 1423,
+      "uchi": 1424,
+      "usiek": 1425,
+      "uiyogei": 1426,
+      "yek": 1427,
+      "yron": 1428,
+      "Ġ5": 1429,
+      "Ġkand": 1430,
+      "Ġkaman": 1431,
+      "Ġayai": 1432,
+      "Ġkoom": 1433,
+      "Ġkoyo": 1434,
+      "Ġkoisto": 1435,
+      "Ġkoweekyi": 1436,
+      "chub": 1437,
+      "innyu": 1438,
+      "Ġnam": 1439,
+      "Ġngo": 1440,
+      "Ġneny": 1441,
+      "Ġnyo": 1442,
+      "Ġakw": 1443,
+      "Ġkilos": 1444,
+      "onik": 1445,
+      "ĠKe": 1446,
+      "ĠKon": 1447,
+      "ĠKong": 1448,
+      "ĠKas": 1449,
+      "Ġteng": 1450,
+      "Ġtab": 1451,
+      "Ġtos": 1452,
+      "Ġtilil": 1453,
+      "ita": 1454,
+      "itet": 1455,
+      "Ġchok": 1456,
+      "Ġchal": 1457,
+      "ani": 1458,
+      "anik": 1459,
+      "ikit": 1460,
+      "ĠAg": 1461,
+      "ĠAn": 1462,
+      "ĠAt": 1463,
+      "isikyi": 1464,
+      "Ġmet": 1465,
+      "Ġmak": 1466,
+      "Ġmiten": 1467,
+      "Ġmwe": 1468,
+      "oten": 1469,
+      "otinwekwak": 1470,
+      "abet": 1471,
+      "ĠJok": 1472,
+      "guoten": 1473,
+      "Ġchepk": 1474,
+      "arik": 1475,
+      "arat": 1476,
+      "araran": 1477,
+      "gech": 1478,
+      "indanyi": 1479,
+      "ering": 1480,
+      "tayat": 1481,
+      "ĠKig": 1482,
+      "ĠKil": 1483,
+      "ĠKiya": 1484,
+      "ĠKigi": 1485,
+      "ĠKiguren": 1486,
+      "ĠJehova": 1487,
+      "ĠAkot": 1488,
+      "wae": 1489,
+      "yach": 1490,
+      "yachini": 1491,
+      "Ġsa": 1492,
+      "Ġkap": 1493,
+      "Ġkatab": 1494,
+      "Ġkapt": 1495,
+      "Ġinat": 1496,
+      "Ġingor": 1497,
+      "ĠNi": 1498,
+      "enywa": 1499,
+      "obek": 1500,
+      "illot": 1501,
+      "Ġkomanda": 1502,
+      "Ġkomiten": 1503,
+      "ĠTugu": 1504,
+      "ĠTubal": 1505,
+      "ĠTUG": 1506,
+      "isiet": 1507,
+      "isiriet": 1508,
+      "omo": 1509,
+      "omen": 1510,
+      "ĠMab": 1511,
+      "ĠMuren": 1512,
+      "ĠMaranet": 1513,
+      "eme": 1514,
+      "Ġkimeng": 1515,
+      "Ġkobwat": 1516,
+      "Ġkobesio": 1517,
+      "chirek": 1518,
+      "wetab": 1519,
+      "ĠEng": 1520,
+      "ĠEber": 1521,
+      "ĠElis": 1522,
+      "Ġkotinye": 1523,
+      "Ġkotindo": 1524,
+      "Ġkotuch": 1525,
+      "Ġkotaban": 1526,
+      "Ġkotokyingei": 1527,
+      "Ġwendote": 1528,
+      "Ġwendi": 1529,
+      "Ġwikit": 1530,
+      "Ġchichi": 1531,
+      "eigei": 1532,
+      "Ġlobo": 1533,
+      "Ġami": 1534,
+      "Ġoeng": 1535,
+      "Ġogeero": 1536,
+      "aka": 1537,
+      "akyi": 1538,
+      "ĠByron": 1539,
+      "ĠSila": 1540,
+      "Ġwerinnyi": 1541,
+      "esak": 1542,
+      "asaka": 1543,
+      "Ġsobond": 1544,
+      "Ġicheget": 1545,
+      "eba": 1546,
+      "eben": 1547,
+      "irir": 1548,
+      "Ġkorik": 1549,
+      "Ġkorir": 1550,
+      "Ġkorip": 1551,
+      "aiyat": 1552,
+      "wanindo": 1553,
+      "wanato": 1554,
+      "Ġkigas": 1555,
+      "Ġkigartat": 1556,
+      "ĠKago": 1557,
+      "Ġoriny": 1558,
+      "Ġkarwat": 1559,
+      "Ġkonyi": 1560,
+      "Ġkonyin": 1561,
+      "Ġbeekab": 1562,
+      "imwa": 1563,
+      "imegit": 1564,
+      "ĠKoot": 1565,
+      "ĠKole": 1566,
+      "ĠAda": 1567,
+      "Ġkonu": 1568,
+      "Ġkonem": 1569,
+      "Ġkondo": 1570,
+      "genyin": 1571,
+      "ĠLuk": 1572,
+      "Ġkosopch": 1573,
+      "Ġrur": 1574,
+      "Ġkikigu": 1575,
+      "Ġkeger": 1576,
+      "Ġkechirek": 1577,
+      "ĠPila": 1578,
+      "Ġema": 1579,
+      "Ġemetab": 1580,
+      "Ġemonoto": 1581,
+      "Ġemotinwekwak": 1582,
+      "Ġkainet": 1583,
+      "Ġkainutik": 1584,
+      "Ġlogoi": 1585,
+      "otiot": 1586,
+      "Ġkagochinet": 1587,
+      "Ġkergeindanywan": 1588,
+      "Ġkabung": 1589,
+      "Ġkaborunet": 1590,
+      "Ġlogoekyik": 1591,
+      "olyot": 1592,
+      "Ġkiba": 1593,
+      "Ġkibunu": 1594,
+      "Ġtaun": 1595,
+      "Ġkobiitu": 1596,
+      "Ġkemo": 1597,
+      "Ġkotook": 1598,
+      "Ġeunek": 1599,
+      "chamwech": 1600,
+      "Ġarawanato": 1601,
+      "ogen": 1602,
+      "opta": 1603,
+      "Ġkoboi": 1604,
+      "ĠMaillot": 1605,
+      "ĠGom": 1606,
+      "Ġkutinnyi": 1607,
+      "Ġkowekyi": 1608,
+      "Ġkomwachi": 1609,
+      "Ġkwandanyi": 1610,
+      "ĠKiigochi": 1611,
+      "Ġkokiyai": 1612,
+      "Ġnyalil": 1613,
+      "anaset": 1614,
+      "Ġmogoi": 1615,
+      "Ġibati": 1616,
+      "Ġkotegisi": 1617,
+      "Ġarawetab": 1618,
+      "weeigei": 1619,
+      "inemun": 1620,
+      "abanab": 1621,
+      "ĠJudas": 1622,
+      "Ġkogeere": 1623,
+      "Ġkiimut": 1624,
+      "Ġiyoteng": 1625,
+      "Ġkoboten": 1626,
+      "Ġkarasta": 1627,
+      "Ġimbaret": 1628,
+      "Ġnyigis": 1629,
+      "Ġnyigan": 1630,
+      "ititit": 1631,
+      "isyen": 1632,
+      "isyek": 1633,
+      "Ġcheptuget": 1634,
+      "ĠImuch": 1635,
+      "Ġrirek": 1636,
+      "otiondeng": 1637,
+      "NDET": 1638,
+      "uuchi": 1639,
+      "ĠKIYAI": 1640,
+      "ĠJEIS": 1641,
+      "ĠJEHO": 1642,
+      "Ġiluu": 1643,
+      "Ġmageng": 1644,
+      "Ġmalaika": 1645,
+      "Ġmalaikaiyat": 1646,
+      "Ġitondanyi": 1647,
+      "ĠUnger": 1648,
+      "Ġleel": 1649,
+      "Ġtoror": 1650,
+      "Ġkasarta": 1651,
+      "Ġingoek": 1652,
+      "ĠTammy": 1653,
+      "Ġtirisi": 1654,
+      "Ġkorobonji": 1655,
+      "Ġruondo": 1656,
+      "gergeitu": 1657,
+      "Ġkirerit": 1658,
+      "ĠKingoyai": 1659,
+      "alem": 1660,
+      "werichi": 1661,
+      "yumji": 1662,
+      "Ġonyi": 1663,
+      "Ġkeche": 1664,
+      "Ġkisob": 1665,
+      "ĠKitoi": 1666,
+      "Ġchemng": 1667,
+      "Ġkaagimit": 1668,
+      "ĠKimokomi": 1669,
+      "ĠYaudik": 1670,
+      "ĠAsuria": 1671,
+      "Ġbetusiechoto": 1672,
+      "Ġcheptugonoto": 1673,
+      "Ġmuguleldanyi": 1674,
+      "Obwan": 1675,
+      "aama": 1676,
+      "Ġkoomben": 1677,
+      "Ġkoyogoito": 1678,
+      "Ġkoweekyigei": 1679,
+      "ĠJoktan": 1680,
+      "Ġkaptis": 1681,
+      "Ġkarwatitet": 1682,
+      "imegitu": 1683,
+      "Ġkosopcho": 1684,
+      "Ġkikiguren": 1685,
+      "ĠPilato": 1686,
+      "ĠJEISO": 1687,
+      "ĠJEHOVAH": 1688,
+      "!'": 1689,
+      "AB": 1690,
+      "AN": 1691,
+      "Am": 1692,
+      "Ang": 1693,
+      "EI": 1694,
+      "EK": 1695,
+      "IN": 1696,
+      "KO": 1697,
+      "Ki": 1698,
+      "Ma": 1699,
+      "Mi": 1700,
+      "MUK": 1701,
+      "Ng": 1702,
+      "TAI": 1703,
+      "UL": 1704,
+      "UT": 1705,
+      "UU": 1706,
+      "WEK": 1707,
+      "ad": 1708,
+      "ait": 1709,
+      "bu": 1710,
+      "but": 1711,
+      "bak": 1712,
+      "doi": 1713,
+      "dutik": 1714,
+      "eu": 1715,
+      "edo": 1716,
+      "gong": 1717,
+      "hle": 1718,
+      "hem": 1719,
+      "heba": 1720,
+      "iik": 1721,
+      "iand": 1722,
+      "ichoto": 1723,
+      "iger": 1724,
+      "iget": 1725,
+      "iboi": 1726,
+      "ianik": 1727,
+      "jael": 1728,
+      "li": 1729,
+      "lu": 1730,
+      "ling": 1731,
+      "log": 1732,
+      "od": 1733,
+      "oit": 1734,
+      "osi": 1735,
+      "oindet": 1736,
+      "oyesyo": 1737,
+      "pa": 1738,
+      "pchi": 1739,
+      "rot": 1740,
+      "rib": 1741,
+      "riny": 1742,
+      "risto": 1743,
+      "raim": 1744,
+      "so": 1745,
+      "sat": 1746,
+      "soi": 1747,
+      "ten": 1748,
+      "tik": 1749,
+      "tany": 1750,
+      "tuget": 1751,
+      "tianik": 1752,
+      "wen": 1753,
+      "wei": 1754,
+      "weret": 1755,
+      "yor": 1756,
+      "ywet": 1757,
+      "yos": 1758,
+      "yand": 1759,
+      "yandan": 1760,
+      "ywei": 1761,
+      "Ġ'": 1762,
+      "Ġ6": 1763,
+      "Ġ9": 1764,
+      "ĠF": 1765,
+      "Ġp": 1766,
+      "Ġon": 1767,
+      "Ġur": 1768,
+      "Ġyo": 1769,
+      "Ġyet": 1770,
+      "ĠCH": 1771,
+      "Ġain": 1772,
+      "Ġala": 1773,
+      "Ġawong": 1774,
+      "Ġayachini": 1775,
+      "Ġkoen": 1776,
+      "Ġkoot": 1777,
+      "Ġkogo": 1778,
+      "Ġkowet": 1779,
+      "Ġkoung": 1780,
+      "Ġkoga": 1781,
+      "Ġkowech": 1782,
+      "Ġkogoito": 1783,
+      "Ġkopchei": 1784,
+      "Ġkogan": 1785,
+      "eter": 1786,
+      "cha": 1787,
+      "chut": 1788,
+      "chindoi": 1789,
+      "ini": 1790,
+      "inam": 1791,
+      "ingo": 1792,
+      "inoton": 1793,
+      "inebe": 1794,
+      "Ġnge": 1795,
+      "Ġnyam": 1796,
+      "Ġakwa": 1797,
+      "Ġkiam": 1798,
+      "Ġkita": 1799,
+      "Ġkisi": 1800,
+      "Ġkiwong": 1801,
+      "Ġkiyesyo": 1802,
+      "Ġkiweeigei": 1803,
+      "ono": 1804,
+      "ĠKet": 1805,
+      "ĠKot": 1806,
+      "ĠKer": 1807,
+      "ĠKor": 1808,
+      "ĠKeny": 1809,
+      "ĠKiny": 1810,
+      "ĠKote": 1811,
+      "ĠKOR": 1812,
+      "Ġte": 1813,
+      "Ġtam": 1814,
+      "Ġtem": 1815,
+      "Ġtany": 1816,
+      "Ġtonon": 1817,
+      "Ġbikab": 1818,
+      "Ġbuny": 1819,
+      "Ġbag": 1820,
+      "Ġbendi": 1821,
+      "Ġbatai": 1822,
+      "Ġbedo": 1823,
+      "ekit": 1824,
+      "iti": 1825,
+      "itik": 1826,
+      "itor": 1827,
+      "itwat": 1828,
+      "itori": 1829,
+      "Ġnee": 1830,
+      "Ġchom": 1831,
+      "Ġchuto": 1832,
+      "ane": 1833,
+      "anyo": 1834,
+      "anach": 1835,
+      "ikel": 1836,
+      "ame": 1837,
+      "amwa": 1838,
+      "amiten": 1839,
+      "ĠAB": 1840,
+      "ĠAR": 1841,
+      "ĠAge": 1842,
+      "ison": 1843,
+      "isit": 1844,
+      "iser": 1845,
+      "israim": 1846,
+      "Ġmab": 1847,
+      "Ġmong": 1848,
+      "Ġmes": 1849,
+      "Ġmomi": 1850,
+      "Ġmuget": 1851,
+      "Ġmitei": 1852,
+      "otindo": 1853,
+      "otwetab": 1854,
+      "unot": 1855,
+      "ungu": 1856,
+      "unnyi": 1857,
+      "abut": 1858,
+      "abel": 1859,
+      "abib": 1860,
+      "abila": 1861,
+      "ĠJaban": 1862,
+      "gusiek": 1863,
+      "Ġchep": 1864,
+      "arah": 1865,
+      "ariand": 1866,
+      "ĠJerus": 1867,
+      "gosta": 1868,
+      "Ġboiboi": 1869,
+      "inde": 1870,
+      "indennyi": 1871,
+      "indanywa": 1872,
+      "erek": 1873,
+      "Ġngetab": 1874,
+      "ĠKion": 1875,
+      "ĠKiyo": 1876,
+      "ĠKiwek": 1877,
+      "ĠKigol": 1878,
+      "ĠKigeer": 1879,
+      "ĠKichamwech": 1880,
+      "Ġigor": 1881,
+      "Ġipchei": 1882,
+      "Ġiguoten": 1883,
+      "Ġirib": 1884,
+      "waun": 1885,
+      "yatogis": 1886,
+      "orik": 1887,
+      "orchi": 1888,
+      "ororon": 1889,
+      "Ġsang": 1890,
+      "Ġsum": 1891,
+      "Ġsisit": 1892,
+      "Ġsabib": 1893,
+      "Ġkaa": 1894,
+      "Ġkal": 1895,
+      "Ġkato": 1896,
+      "Ġkaung": 1897,
+      "Ġkaotik": 1898,
+      "Ġkayam": 1899,
+      "okab": 1900,
+      "Ġinyal": 1901,
+      "Ġinjirenik": 1902,
+      "lapkeit": 1903,
+      "ĠNim": 1904,
+      "ĠNgech": 1905,
+      "ĠNinebe": 1906,
+      "enyo": 1907,
+      "oben": 1908,
+      "obet": 1909,
+      "yeli": 1910,
+      "otomo": 1911,
+      "iland": 1912,
+      "Ġkomet": 1913,
+      "Ġkomong": 1914,
+      "Ġkomosi": 1915,
+      "ĠTar": 1916,
+      "atindet": 1917,
+      "atetab": 1918,
+      "atennyi": 1919,
+      "atutik": 1920,
+      "omiten": 1921,
+      "omnatet": 1922,
+      "omiti": 1923,
+      "Ġkwariand": 1924,
+      "ure": 1925,
+      "ĠMes": 1926,
+      "ĠMand": 1927,
+      "ĠMelit": 1928,
+      "ĠMata": 1929,
+      "ĠMwae": 1930,
+      "ĠMeu": 1931,
+      "ĠMisraim": 1932,
+      "ondet": 1933,
+      "ondit": 1934,
+      "onduni": 1935,
+      "emak": 1936,
+      "ember": 1937,
+      "Ġkimaran": 1938,
+      "Ġkimanda": 1939,
+      "Ġkimanach": 1940,
+      "Ġkoba": 1941,
+      "Ġkobek": 1942,
+      "Ġkobit": 1943,
+      "Ġkobis": 1944,
+      "Ġkobun": 1945,
+      "Ġkobar": 1946,
+      "Ġkobir": 1947,
+      "Ġkobityo": 1948,
+      "Ġkoberur": 1949,
+      "Ġkobara": 1950,
+      "Ġkobusyi": 1951,
+      "ĠEup": 1952,
+      "Ġkotab": 1953,
+      "osto": 1954,
+      "woe": 1955,
+      "wolji": 1956,
+      "Ġabar": 1957,
+      "Ġabwat": 1958,
+      "Ġtie": 1959,
+      "Ġtipt": 1960,
+      "ungweret": 1961,
+      "Ġkinam": 1962,
+      "Ġkinap": 1963,
+      "Ġkinerech": 1964,
+      "Ġame": 1965,
+      "Ġamage": 1966,
+      "Ġoinet": 1967,
+      "Ġogergeitu": 1968,
+      "Ġketeb": 1969,
+      "Ġketoton": 1970,
+      "aktoi": 1971,
+      "ĠBik": 1972,
+      "ĠBoun": 1973,
+      "ĠBiik": 1974,
+      "ĠSab": 1975,
+      "ĠSim": 1976,
+      "ĠSeret": 1977,
+      "ĠSela": 1978,
+      "ĠSid": 1979,
+      "ĠSOB": 1980,
+      "ĠSheba": 1981,
+      "ĠSiget": 1982,
+      "ĠSarah": 1983,
+      "Ġyeito": 1984,
+      "Ġyechen": 1985,
+      "Ġyema": 1986,
+      "Ġweritab": 1987,
+      "Ġkipt": 1988,
+      "Ġkiptayat": 1989,
+      "Ġkiplog": 1990,
+      "esyo": 1991,
+      "estai": 1992,
+      "isiekab": 1993,
+      "asa": 1994,
+      "ibar": 1995,
+      "ibai": 1996,
+      "Ġaginye": 1997,
+      "Ġagich": 1998,
+      "Ġsobe": 1999
+    },
+    "merges": [
+      [
+        "Ġ",
+        "k"
+      ],
+      [
+        "Ġ",
+        "a"
+      ],
+      [
+        "č",
+        "Ċ"
+      ],
+      [
+        "e",
+        "n"
+      ],
+      [
+        "Ġk",
+        "o"
+      ],
+      [
+        "e",
+        "t"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "i",
+        "n"
+      ],
+      [
+        "Ġ",
+        "n"
+      ],
+      [
+        "Ġa",
+        "k"
+      ],
+      [
+        "Ġk",
+        "i"
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "Ġ",
+        "K"
+      ],
+      [
+        "Ġ",
+        "t"
+      ],
+      [
+        "Ġ",
+        "b"
+      ],
+      [
+        "e",
+        "k"
+      ],
+      [
+        "i",
+        "t"
+      ],
+      [
+        "Ġn",
+        "e"
+      ],
+      [
+        "Ġ",
+        "ch"
+      ],
+      [
+        "a",
+        "n"
+      ],
+      [
+        "i",
+        "k"
+      ],
+      [
+        "en",
+        "g"
+      ],
+      [
+        "a",
+        "m"
+      ],
+      [
+        "Ġ",
+        "A"
+      ],
+      [
+        "i",
+        "s"
+      ],
+      [
+        "Ġ",
+        "m"
+      ],
+      [
+        "o",
+        "t"
+      ],
+      [
+        "u",
+        "n"
+      ],
+      [
+        "a",
+        "b"
+      ],
+      [
+        "Ġ",
+        "J"
+      ],
+      [
+        "g",
+        "u"
+      ],
+      [
+        "Ġch",
+        "e"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "ĠJ",
+        "e"
+      ],
+      [
+        "g",
+        "e"
+      ],
+      [
+        "g",
+        "o"
+      ],
+      [
+        "Ġb",
+        "o"
+      ],
+      [
+        "Ġt",
+        "u"
+      ],
+      [
+        "in",
+        "d"
+      ],
+      [
+        "e",
+        "r"
+      ],
+      [
+        "t",
+        "a"
+      ],
+      [
+        "a",
+        "h"
+      ],
+      [
+        "Ġn",
+        "g"
+      ],
+      [
+        "l",
+        "e"
+      ],
+      [
+        "s",
+        "i"
+      ],
+      [
+        "h",
+        "o"
+      ],
+      [
+        "ĠK",
+        "i"
+      ],
+      [
+        "ĠJe",
+        "ho"
+      ],
+      [
+        "ĠJeho",
+        "v"
+      ],
+      [
+        "Ġtu",
+        "gu"
+      ],
+      [
+        "u",
+        "t"
+      ],
+      [
+        "Ġ",
+        "i"
+      ],
+      [
+        "u",
+        "k"
+      ],
+      [
+        "ĠJehov",
+        "ah"
+      ],
+      [
+        "ĠA",
+        "k"
+      ],
+      [
+        "Ġ",
+        "eng"
+      ],
+      [
+        "on",
+        "y"
+      ],
+      [
+        "Ġ",
+        "čĊ"
+      ],
+      [
+        "n",
+        "y"
+      ],
+      [
+        "w",
+        "a"
+      ],
+      [
+        "y",
+        "a"
+      ],
+      [
+        "Ġtugu",
+        "l"
+      ],
+      [
+        "ind",
+        "et"
+      ],
+      [
+        "o",
+        "r"
+      ],
+      [
+        "Ġ",
+        "s"
+      ],
+      [
+        "Ġk",
+        "a"
+      ],
+      [
+        "o",
+        "k"
+      ],
+      [
+        "Ġ",
+        "in"
+      ],
+      [
+        "am",
+        "uk"
+      ],
+      [
+        "ta",
+        "indet"
+      ],
+      [
+        "amuk",
+        "taindet"
+      ],
+      [
+        "l",
+        "a"
+      ],
+      [
+        "Ġ",
+        "N"
+      ],
+      [
+        "en",
+        "y"
+      ],
+      [
+        "ĠK",
+        "amuktaindet"
+      ],
+      [
+        "o",
+        "b"
+      ],
+      [
+        "y",
+        "e"
+      ],
+      [
+        "t",
+        "o"
+      ],
+      [
+        "Ġ",
+        "en"
+      ],
+      [
+        "ot",
+        "o"
+      ],
+      [
+        "i",
+        "l"
+      ],
+      [
+        "Ġko",
+        "m"
+      ],
+      [
+        "Ġ",
+        "T"
+      ],
+      [
+        "is",
+        "i"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "b",
+        "o"
+      ],
+      [
+        "o",
+        "m"
+      ],
+      [
+        "Ġk",
+        "w"
+      ],
+      [
+        "Ġb",
+        "et"
+      ],
+      [
+        "u",
+        "r"
+      ],
+      [
+        "Ġ",
+        "M"
+      ],
+      [
+        "Ġko",
+        "le"
+      ],
+      [
+        "on",
+        "d"
+      ],
+      [
+        "e",
+        "m"
+      ],
+      [
+        "ya",
+        "i"
+      ],
+      [
+        "Ġki",
+        "m"
+      ],
+      [
+        "Ġko",
+        "b"
+      ],
+      [
+        "ch",
+        "i"
+      ],
+      [
+        "w",
+        "et"
+      ],
+      [
+        "Ġ",
+        "E"
+      ],
+      [
+        "is",
+        "o"
+      ],
+      [
+        "Ġko",
+        "t"
+      ],
+      [
+        "y",
+        "i"
+      ],
+      [
+        "Ġa",
+        "ge"
+      ],
+      [
+        "Ġa",
+        "ny"
+      ],
+      [
+        "Ġm",
+        "i"
+      ],
+      [
+        "o",
+        "s"
+      ],
+      [
+        "ĠJe",
+        "iso"
+      ],
+      [
+        "w",
+        "o"
+      ],
+      [
+        "Ġ",
+        "w"
+      ],
+      [
+        "y",
+        "o"
+      ],
+      [
+        "Ġa",
+        "b"
+      ],
+      [
+        "Ġt",
+        "i"
+      ],
+      [
+        "et",
+        "ab"
+      ],
+      [
+        "Ġch",
+        "i"
+      ],
+      [
+        "Ġany",
+        "un"
+      ],
+      [
+        "en",
+        "d"
+      ],
+      [
+        "ĠN",
+        "o"
+      ],
+      [
+        "ĠNo",
+        "a"
+      ],
+      [
+        "e",
+        "i"
+      ],
+      [
+        "j",
+        "i"
+      ],
+      [
+        "w",
+        "ek"
+      ],
+      [
+        "un",
+        "g"
+      ],
+      [
+        "Ġk",
+        "in"
+      ],
+      [
+        "Ġ",
+        "l"
+      ],
+      [
+        "Ġa",
+        "m"
+      ],
+      [
+        "on",
+        "g"
+      ],
+      [
+        "n",
+        "g"
+      ],
+      [
+        "Ġ",
+        "o"
+      ],
+      [
+        "Ġk",
+        "et"
+      ],
+      [
+        "a",
+        "k"
+      ],
+      [
+        "e",
+        "ch"
+      ],
+      [
+        "Ġ",
+        "B"
+      ],
+      [
+        "Ġ",
+        "S"
+      ],
+      [
+        "e",
+        "l"
+      ],
+      [
+        "Ġ",
+        "ye"
+      ],
+      [
+        "ge",
+        "i"
+      ],
+      [
+        "Ġw",
+        "er"
+      ],
+      [
+        "Ġki",
+        "p"
+      ],
+      [
+        "e",
+        "s"
+      ],
+      [
+        "isi",
+        "ek"
+      ],
+      [
+        "a",
+        "s"
+      ],
+      [
+        "i",
+        "b"
+      ],
+      [
+        "Ġa",
+        "g"
+      ],
+      [
+        "it",
+        "o"
+      ],
+      [
+        "si",
+        "ek"
+      ],
+      [
+        "l",
+        "en"
+      ],
+      [
+        "Ġ",
+        "\""
+      ],
+      [
+        "go",
+        "l"
+      ],
+      [
+        "si",
+        "ch"
+      ],
+      [
+        "s",
+        "eng"
+      ],
+      [
+        "on",
+        "i"
+      ],
+      [
+        "Ġs",
+        "ob"
+      ],
+      [
+        "end",
+        "et"
+      ],
+      [
+        "seng",
+        "wet"
+      ],
+      [
+        "Ġbet",
+        "ut"
+      ],
+      [
+        "an",
+        "d"
+      ],
+      [
+        "Ġi",
+        "ch"
+      ],
+      [
+        "Ġin",
+        "endet"
+      ],
+      [
+        "e",
+        "b"
+      ],
+      [
+        "e",
+        "ek"
+      ],
+      [
+        "i",
+        "r"
+      ],
+      [
+        "Ġ",
+        "I"
+      ],
+      [
+        "Ġ",
+        "si"
+      ],
+      [
+        "la",
+        "k"
+      ],
+      [
+        "Ġko",
+        "r"
+      ],
+      [
+        "a",
+        "i"
+      ],
+      [
+        "Ġ",
+        "u"
+      ],
+      [
+        "in",
+        "g"
+      ],
+      [
+        "w",
+        "an"
+      ],
+      [
+        "Ġk",
+        "eny"
+      ],
+      [
+        "Ġki",
+        "g"
+      ],
+      [
+        "ik",
+        "ab"
+      ],
+      [
+        "Ġa",
+        "go"
+      ],
+      [
+        "ĠK",
+        "a"
+      ],
+      [
+        "an",
+        "y"
+      ],
+      [
+        "eng",
+        "ek"
+      ],
+      [
+        "len",
+        "ji"
+      ],
+      [
+        "Ġne",
+        "bo"
+      ],
+      [
+        "ar",
+        "an"
+      ],
+      [
+        "Ġa",
+        "n"
+      ],
+      [
+        "Ġs",
+        "o"
+      ],
+      [
+        "Ġl",
+        "o"
+      ],
+      [
+        "ond",
+        "o"
+      ],
+      [
+        "el",
+        "it"
+      ],
+      [
+        "u",
+        "s"
+      ],
+      [
+        "Ġ",
+        "or"
+      ],
+      [
+        "Ġk",
+        "ar"
+      ],
+      [
+        "Ġko",
+        "ny"
+      ],
+      [
+        "Ġb",
+        "eek"
+      ],
+      [
+        "ot",
+        "on"
+      ],
+      [
+        "ar",
+        "et"
+      ],
+      [
+        "wo",
+        "g"
+      ],
+      [
+        "C",
+        "h"
+      ],
+      [
+        "Ġm",
+        "a"
+      ],
+      [
+        "Ġm",
+        "elit"
+      ],
+      [
+        "Ġbet",
+        "u"
+      ],
+      [
+        "a",
+        "l"
+      ],
+      [
+        "i",
+        "m"
+      ],
+      [
+        "o",
+        "i"
+      ],
+      [
+        "â",
+        "Ģ"
+      ],
+      [
+        "ĠK",
+        "o"
+      ],
+      [
+        "ĠA",
+        "d"
+      ],
+      [
+        "ĠE",
+        "n"
+      ],
+      [
+        "y",
+        "ik"
+      ],
+      [
+        "an",
+        "g"
+      ],
+      [
+        "ny",
+        "i"
+      ],
+      [
+        "âĢ",
+        "Ļ"
+      ],
+      [
+        "Ġko",
+        "n"
+      ],
+      [
+        "Ġki",
+        "t"
+      ],
+      [
+        "Ġt",
+        "is"
+      ],
+      [
+        "g",
+        "eny"
+      ],
+      [
+        "u",
+        "gu"
+      ],
+      [
+        "Ġ",
+        "L"
+      ],
+      [
+        "ch",
+        "oto"
+      ],
+      [
+        "Ġkeny",
+        "isiek"
+      ],
+      [
+        "ĠAd",
+        "am"
+      ],
+      [
+        "Ġk",
+        "er"
+      ],
+      [
+        "Ġko",
+        "s"
+      ],
+      [
+        "Ġi",
+        "m"
+      ],
+      [
+        "Ġmi",
+        "e"
+      ],
+      [
+        ".",
+        "\""
+      ],
+      [
+        "Ġ",
+        "H"
+      ],
+      [
+        "Ġ",
+        "r"
+      ],
+      [
+        "Ġch",
+        "ito"
+      ],
+      [
+        "an",
+        "yi"
+      ],
+      [
+        "Ġbo",
+        "gol"
+      ],
+      [
+        "il",
+        "il"
+      ],
+      [
+        "Ġam",
+        "u"
+      ],
+      [
+        "wog",
+        "ik"
+      ],
+      [
+        "Ġ",
+        "Ch"
+      ],
+      [
+        "Ġko",
+        "k"
+      ],
+      [
+        "Ġt",
+        "ar"
+      ],
+      [
+        "eng",
+        "e"
+      ],
+      [
+        "ĠT",
+        "engek"
+      ],
+      [
+        "Ġki",
+        "k"
+      ],
+      [
+        "Ġchi",
+        "choto"
+      ],
+      [
+        "Ġbetu",
+        "siek"
+      ],
+      [
+        "u",
+        "it"
+      ],
+      [
+        "Ġa",
+        "r"
+      ],
+      [
+        "ge",
+        "er"
+      ],
+      [
+        "ĠKi",
+        "m"
+      ],
+      [
+        "ĠKi",
+        "p"
+      ],
+      [
+        "Ġkip",
+        "sengwet"
+      ],
+      [
+        "Ġtis",
+        "ab"
+      ],
+      [
+        "Ġtar",
+        "it"
+      ],
+      [
+        "g",
+        "is"
+      ],
+      [
+        "y",
+        "an"
+      ],
+      [
+        "Ġk",
+        "e"
+      ],
+      [
+        "uk",
+        "uit"
+      ],
+      [
+        "ĠT",
+        "ilil"
+      ],
+      [
+        "Ġag",
+        "enge"
+      ],
+      [
+        "w",
+        "ok"
+      ],
+      [
+        "Ġ",
+        "Y"
+      ],
+      [
+        "en",
+        "nyi"
+      ],
+      [
+        "Ġm",
+        "b"
+      ],
+      [
+        "Ġkim",
+        "wa"
+      ],
+      [
+        "ĠB",
+        "ukuit"
+      ],
+      [
+        "y",
+        "et"
+      ],
+      [
+        "y",
+        "ot"
+      ],
+      [
+        "Ġ",
+        "P"
+      ],
+      [
+        "Ġ",
+        "em"
+      ],
+      [
+        "Ġko",
+        "yai"
+      ],
+      [
+        "am",
+        "an"
+      ],
+      [
+        "gu",
+        "ur"
+      ],
+      [
+        "ge",
+        "r"
+      ],
+      [
+        "Ġtugu",
+        "k"
+      ],
+      [
+        "Ġin",
+        "g"
+      ],
+      [
+        "Ġkom",
+        "e"
+      ],
+      [
+        "ur",
+        "en"
+      ],
+      [
+        "a",
+        "ta"
+      ],
+      [
+        "e",
+        "gei"
+      ],
+      [
+        "r",
+        "en"
+      ],
+      [
+        "Ġa",
+        "eng"
+      ],
+      [
+        "Ġa",
+        "lak"
+      ],
+      [
+        "Ġki",
+        "sich"
+      ],
+      [
+        "ĠA",
+        "m"
+      ],
+      [
+        "le",
+        "l"
+      ],
+      [
+        "wa",
+        "k"
+      ],
+      [
+        "Ġka",
+        "in"
+      ],
+      [
+        "Ġich",
+        "ek"
+      ],
+      [
+        "Ġlo",
+        "go"
+      ],
+      [
+        "t",
+        "ab"
+      ],
+      [
+        "Ġn",
+        "oto"
+      ],
+      [
+        "Ġb",
+        "ar"
+      ],
+      [
+        "ot",
+        "i"
+      ],
+      [
+        "ge",
+        "ind"
+      ],
+      [
+        "ĠKa",
+        "en"
+      ],
+      [
+        "ugu",
+        "l"
+      ],
+      [
+        "Ġ",
+        "O"
+      ],
+      [
+        "Ġa",
+        "si"
+      ],
+      [
+        "ch",
+        "in"
+      ],
+      [
+        "in",
+        "y"
+      ],
+      [
+        "Ġki",
+        "y"
+      ],
+      [
+        "Ġt",
+        "aman"
+      ],
+      [
+        "Ġb",
+        "i"
+      ],
+      [
+        "Ġbo",
+        "r"
+      ],
+      [
+        "Ġka",
+        "go"
+      ],
+      [
+        "Ġti",
+        "ong"
+      ],
+      [
+        "Ġkin",
+        "go"
+      ],
+      [
+        "Ġo",
+        "le"
+      ],
+      [
+        "Ġket",
+        "it"
+      ],
+      [
+        "Ġker",
+        "geind"
+      ],
+      [
+        "guur",
+        "e"
+      ],
+      [
+        "a",
+        "la"
+      ],
+      [
+        "Ġ",
+        "ya"
+      ],
+      [
+        "Ġki",
+        "yai"
+      ],
+      [
+        "to",
+        "i"
+      ],
+      [
+        "g",
+        "a"
+      ],
+      [
+        "Ġk",
+        "ab"
+      ],
+      [
+        "Ġko",
+        "ng"
+      ],
+      [
+        "in",
+        "ye"
+      ],
+      [
+        "Ġak",
+        "o"
+      ],
+      [
+        "ĠK",
+        "it"
+      ],
+      [
+        "it",
+        "yo"
+      ],
+      [
+        "ind",
+        "o"
+      ],
+      [
+        "Ġng",
+        "w"
+      ],
+      [
+        "Ġkw",
+        "ondo"
+      ],
+      [
+        "aran",
+        "et"
+      ],
+      [
+        "Ġan",
+        "an"
+      ],
+      [
+        "Ġlogo",
+        "ek"
+      ],
+      [
+        "u",
+        "g"
+      ],
+      [
+        "ik",
+        "yik"
+      ],
+      [
+        "un",
+        "et"
+      ],
+      [
+        "Ġche",
+        "bo"
+      ],
+      [
+        "Ġi",
+        "i"
+      ],
+      [
+        "Ġka",
+        "at"
+      ],
+      [
+        "eny",
+        "in"
+      ],
+      [
+        "ob",
+        "e"
+      ],
+      [
+        "ob",
+        "o"
+      ],
+      [
+        "ĠE",
+        "d"
+      ],
+      [
+        "ĠKip",
+        "sengwet"
+      ],
+      [
+        "a",
+        "ch"
+      ],
+      [
+        "e",
+        "p"
+      ],
+      [
+        "i",
+        "it"
+      ],
+      [
+        "p",
+        "ch"
+      ],
+      [
+        "Ġ",
+        "la"
+      ],
+      [
+        "Ġ",
+        "lak"
+      ],
+      [
+        "ĠA",
+        "b"
+      ],
+      [
+        "go",
+        "r"
+      ],
+      [
+        "il",
+        "d"
+      ],
+      [
+        "Ġkip",
+        "k"
+      ],
+      [
+        "ĠI",
+        "n"
+      ],
+      [
+        "'",
+        ","
+      ],
+      [
+        "t",
+        "ind"
+      ],
+      [
+        "Ġko",
+        "lenji"
+      ],
+      [
+        "Ġko",
+        "geny"
+      ],
+      [
+        "ĠA",
+        "wa"
+      ],
+      [
+        "Ġm",
+        "aranet"
+      ],
+      [
+        "ĠN",
+        "g"
+      ],
+      [
+        "ĠY",
+        "e"
+      ],
+      [
+        "tind",
+        "oni"
+      ],
+      [
+        "d",
+        "e"
+      ],
+      [
+        "o",
+        "l"
+      ],
+      [
+        "Ġko",
+        "u"
+      ],
+      [
+        "Ġki",
+        "b"
+      ],
+      [
+        "on",
+        "ok"
+      ],
+      [
+        "Ġm",
+        "is"
+      ],
+      [
+        "un",
+        "y"
+      ],
+      [
+        "Ġs",
+        "om"
+      ],
+      [
+        "Ġkw",
+        "en"
+      ],
+      [
+        "Ġkw",
+        "ond"
+      ],
+      [
+        "Ġkig",
+        "a"
+      ],
+      [
+        "Ġbar",
+        "ak"
+      ],
+      [
+        "Ġbi",
+        "ik"
+      ],
+      [
+        "Ġsom",
+        "ok"
+      ],
+      [
+        "a",
+        "p"
+      ],
+      [
+        "y",
+        "ok"
+      ],
+      [
+        "Ġa",
+        "ch"
+      ],
+      [
+        "Ġko",
+        "i"
+      ],
+      [
+        "Ġko",
+        "ek"
+      ],
+      [
+        "Ġki",
+        "r"
+      ],
+      [
+        "Ġki",
+        "ik"
+      ],
+      [
+        "Ġt",
+        "a"
+      ],
+      [
+        "it",
+        "ab"
+      ],
+      [
+        "Ġm",
+        "ut"
+      ],
+      [
+        "Ġkom",
+        "ugul"
+      ],
+      [
+        "Ġkw",
+        "o"
+      ],
+      [
+        "Ġkob",
+        "iit"
+      ],
+      [
+        "Ġti",
+        "ony"
+      ],
+      [
+        "Ġago",
+        "i"
+      ],
+      [
+        "Ġago",
+        "bo"
+      ],
+      [
+        "any",
+        "wa"
+      ],
+      [
+        "Ġtarit",
+        "ik"
+      ],
+      [
+        "o",
+        "siek"
+      ],
+      [
+        "u",
+        "b"
+      ],
+      [
+        "Ġ",
+        "is"
+      ],
+      [
+        "Ġk",
+        "em"
+      ],
+      [
+        "Ġko",
+        "to"
+      ],
+      [
+        "Ġko",
+        "sich"
+      ],
+      [
+        "in",
+        "wek"
+      ],
+      [
+        "Ġak",
+        "obo"
+      ],
+      [
+        "Ġki",
+        "ek"
+      ],
+      [
+        "ĠK",
+        "isi"
+      ],
+      [
+        "Ġt",
+        "ai"
+      ],
+      [
+        "ĠA",
+        "ng"
+      ],
+      [
+        "ot",
+        "e"
+      ],
+      [
+        "go",
+        "k"
+      ],
+      [
+        "Ġi",
+        "am"
+      ],
+      [
+        "Ġin",
+        "ye"
+      ],
+      [
+        "ĠN",
+        "e"
+      ],
+      [
+        "Ġye",
+        "ityo"
+      ],
+      [
+        "Ġwer",
+        "ikab"
+      ],
+      [
+        "Ġkos",
+        "k"
+      ],
+      [
+        "i",
+        "a"
+      ],
+      [
+        "p",
+        "t"
+      ],
+      [
+        "u",
+        "d"
+      ],
+      [
+        "u",
+        "ch"
+      ],
+      [
+        "w",
+        "ech"
+      ],
+      [
+        "y",
+        "uk"
+      ],
+      [
+        "Ġ",
+        "e"
+      ],
+      [
+        "Ġko",
+        "l"
+      ],
+      [
+        "ch",
+        "am"
+      ],
+      [
+        "Ġm",
+        "e"
+      ],
+      [
+        "er",
+        "o"
+      ],
+      [
+        "wa",
+        "t"
+      ],
+      [
+        "ya",
+        "t"
+      ],
+      [
+        "or",
+        "et"
+      ],
+      [
+        "wo",
+        "chi"
+      ],
+      [
+        "Ġo",
+        "l"
+      ],
+      [
+        "Ġket",
+        "ik"
+      ],
+      [
+        "ech",
+        "en"
+      ],
+      [
+        "Ġsob",
+        "ei"
+      ],
+      [
+        "and",
+        "a"
+      ],
+      [
+        "al",
+        "ek"
+      ],
+      [
+        "ĠKo",
+        "lenji"
+      ],
+      [
+        "Ġar",
+        "a"
+      ],
+      [
+        "Ġtaman",
+        "wogik"
+      ],
+      [
+        "ĠEd",
+        "en"
+      ],
+      [
+        "Ġkipk",
+        "oi"
+      ],
+      [
+        "g",
+        "it"
+      ],
+      [
+        "i",
+        "et"
+      ],
+      [
+        "o",
+        "g"
+      ],
+      [
+        "o",
+        "un"
+      ],
+      [
+        "p",
+        "k"
+      ],
+      [
+        "y",
+        "on"
+      ],
+      [
+        "Ġ",
+        "y"
+      ],
+      [
+        "Ġn",
+        "gor"
+      ],
+      [
+        "Ġki",
+        "it"
+      ],
+      [
+        "Ġt",
+        "inye"
+      ],
+      [
+        "un",
+        "e"
+      ],
+      [
+        "un",
+        "i"
+      ],
+      [
+        "Ġtu",
+        "wan"
+      ],
+      [
+        "ut",
+        "ik"
+      ],
+      [
+        "ut",
+        "egei"
+      ],
+      [
+        "to",
+        "s"
+      ],
+      [
+        "ĠM",
+        "ar"
+      ],
+      [
+        "Ġkim",
+        "a"
+      ],
+      [
+        "Ġkar",
+        "aran"
+      ],
+      [
+        "Ġmb",
+        "ar"
+      ],
+      [
+        "Ġmb",
+        "aret"
+      ],
+      [
+        "ĠAb",
+        "il"
+      ],
+      [
+        ".",
+        "."
+      ],
+      [
+        "E",
+        "T"
+      ],
+      [
+        "a",
+        "g"
+      ],
+      [
+        "g",
+        "et"
+      ],
+      [
+        "o",
+        "p"
+      ],
+      [
+        "u",
+        "utegei"
+      ],
+      [
+        "y",
+        "om"
+      ],
+      [
+        "Ġ",
+        "it"
+      ],
+      [
+        "Ġk",
+        "am"
+      ],
+      [
+        "Ġa",
+        "ng"
+      ],
+      [
+        "Ġko",
+        "bo"
+      ],
+      [
+        "ch",
+        "e"
+      ],
+      [
+        "Ġn",
+        "d"
+      ],
+      [
+        "Ġki",
+        "i"
+      ],
+      [
+        "Ġki",
+        "guure"
+      ],
+      [
+        "am",
+        "i"
+      ],
+      [
+        "is",
+        "to"
+      ],
+      [
+        "un",
+        "u"
+      ],
+      [
+        "ĠJ",
+        "os"
+      ],
+      [
+        "go",
+        "chi"
+      ],
+      [
+        "Ġtu",
+        "ga"
+      ],
+      [
+        "er",
+        "u"
+      ],
+      [
+        "ut",
+        "ab"
+      ],
+      [
+        "ya",
+        "l"
+      ],
+      [
+        "Ġka",
+        "g"
+      ],
+      [
+        "ĠM",
+        "a"
+      ],
+      [
+        "ĠM",
+        "et"
+      ],
+      [
+        "ond",
+        "oni"
+      ],
+      [
+        "Ġkim",
+        "i"
+      ],
+      [
+        "Ġl",
+        "et"
+      ],
+      [
+        "Ġsob",
+        "et"
+      ],
+      [
+        "Ġich",
+        "uutegei"
+      ],
+      [
+        "Ġkar",
+        "on"
+      ],
+      [
+        "Ġkipsengwet",
+        "isiek"
+      ],
+      [
+        "wok",
+        "ik"
+      ],
+      [
+        "Ġem",
+        "et"
+      ],
+      [
+        "Ġkergeind",
+        "anywa"
+      ],
+      [
+        "tindoni",
+        "ondoni"
+      ],
+      [
+        "Ġkwond",
+        "anyi"
+      ],
+      [
+        "ĠAng",
+        "ot"
+      ],
+      [
+        "ĠJos",
+        "ep"
+      ],
+      [
+        "1",
+        "9"
+      ],
+      [
+        "2",
+        "0"
+      ],
+      [
+        "f",
+        "or"
+      ],
+      [
+        "m",
+        "i"
+      ],
+      [
+        "Ġ",
+        "1"
+      ],
+      [
+        "Ġ",
+        "G"
+      ],
+      [
+        "Ġ",
+        "ot"
+      ],
+      [
+        "Ġ",
+        "for"
+      ],
+      [
+        "Ġk",
+        "ut"
+      ],
+      [
+        "Ġk",
+        "ur"
+      ],
+      [
+        "Ġa",
+        "le"
+      ],
+      [
+        "Ġko",
+        "wek"
+      ],
+      [
+        "Ġki",
+        "ib"
+      ],
+      [
+        "ĠK",
+        "in"
+      ],
+      [
+        "Ġt",
+        "engek"
+      ],
+      [
+        "Ġb",
+        "ik"
+      ],
+      [
+        "it",
+        "en"
+      ],
+      [
+        "Ġm",
+        "eng"
+      ],
+      [
+        "ĠKi",
+        "ch"
+      ],
+      [
+        "Ġkom",
+        "wa"
+      ],
+      [
+        "Ġkw",
+        "and"
+      ],
+      [
+        "Ġti",
+        "b"
+      ],
+      [
+        "ĠB",
+        "ib"
+      ],
+      [
+        "ĠS",
+        "em"
+      ],
+      [
+        "Ġwer",
+        "ik"
+      ],
+      [
+        "eb",
+        "e"
+      ],
+      [
+        "ĠCh",
+        "ild"
+      ],
+      [
+        "ĠKim",
+        "wa"
+      ],
+      [
+        "Ġing",
+        "uni"
+      ],
+      [
+        "Ġkoi",
+        "geny"
+      ],
+      [
+        "Ġtinye",
+        "i"
+      ],
+      [
+        "ĠMar",
+        "ia"
+      ],
+      [
+        "yom",
+        "is"
+      ],
+      [
+        "Ġnd",
+        "aret"
+      ],
+      [
+        "wokik",
+        "yuk"
+      ],
+      [
+        "ĠBib",
+        "le"
+      ],
+      [
+        "ĠChild",
+        "ren"
+      ],
+      [
+        ",",
+        "\""
+      ],
+      [
+        "b",
+        "er"
+      ],
+      [
+        "i",
+        "la"
+      ],
+      [
+        "l",
+        "am"
+      ],
+      [
+        "s",
+        "ing"
+      ],
+      [
+        "Ġk",
+        "es"
+      ],
+      [
+        "Ġko",
+        "am"
+      ],
+      [
+        "in",
+        "et"
+      ],
+      [
+        "Ġki",
+        "cham"
+      ],
+      [
+        "ĠA",
+        "s"
+      ],
+      [
+        "ar",
+        "ta"
+      ],
+      [
+        "ĠKi",
+        "i"
+      ],
+      [
+        "ny",
+        "u"
+      ],
+      [
+        "wa",
+        "i"
+      ],
+      [
+        "Ġkom",
+        "i"
+      ],
+      [
+        "Ġkin",
+        "g"
+      ],
+      [
+        "ĠS",
+        "et"
+      ],
+      [
+        "Ġso",
+        "gol"
+      ],
+      [
+        "Ġkit",
+        "ar"
+      ],
+      [
+        "ĠL",
+        "a"
+      ],
+      [
+        "Ġim",
+        "an"
+      ],
+      [
+        "Ġkok",
+        "i"
+      ],
+      [
+        "chin",
+        "et"
+      ],
+      [
+        "ĠIn",
+        "go"
+      ],
+      [
+        "Ġmeng",
+        "echen"
+      ],
+      [
+        "a",
+        "ik"
+      ],
+      [
+        "b",
+        "ata"
+      ],
+      [
+        "m",
+        "o"
+      ],
+      [
+        "p",
+        "tos"
+      ],
+      [
+        "t",
+        "am"
+      ],
+      [
+        "y",
+        "oni"
+      ],
+      [
+        "Ġ",
+        "("
+      ],
+      [
+        "Ġa",
+        "lam"
+      ],
+      [
+        "Ġko",
+        "yok"
+      ],
+      [
+        "in",
+        "e"
+      ],
+      [
+        "Ġn",
+        "oton"
+      ],
+      [
+        "Ġn",
+        "yal"
+      ],
+      [
+        "Ġki",
+        "ya"
+      ],
+      [
+        "Ġki",
+        "toi"
+      ],
+      [
+        "an",
+        "as"
+      ],
+      [
+        "am",
+        "ek"
+      ],
+      [
+        "Ġm",
+        "o"
+      ],
+      [
+        "Ġtu",
+        "l"
+      ],
+      [
+        "Ġtu",
+        "wai"
+      ],
+      [
+        "Ġi",
+        "b"
+      ],
+      [
+        "om",
+        "i"
+      ],
+      [
+        "Ġkob",
+        "oto"
+      ],
+      [
+        "Ġkot",
+        "e"
+      ],
+      [
+        "Ġket",
+        "oto"
+      ],
+      [
+        "Ġsob",
+        "ondo"
+      ],
+      [
+        "Ġkor",
+        "a"
+      ],
+      [
+        "Ġso",
+        "et"
+      ],
+      [
+        "ĠL",
+        "amek"
+      ],
+      [
+        "ĠH",
+        "am"
+      ],
+      [
+        "Ġar",
+        "tam"
+      ],
+      [
+        "ĠAm",
+        "u"
+      ],
+      [
+        "iny",
+        "in"
+      ],
+      [
+        "ach",
+        "en"
+      ],
+      [
+        "Ġla",
+        "gok"
+      ],
+      [
+        "Ġlak",
+        "wet"
+      ],
+      [
+        "Ġmis",
+        "sing"
+      ],
+      [
+        "uny",
+        "ek"
+      ],
+      [
+        "Ġkwen",
+        "utab"
+      ],
+      [
+        "Ġis",
+        "obe"
+      ],
+      [
+        "Ġkosk",
+        "ol"
+      ],
+      [
+        "Ġara",
+        "wet"
+      ],
+      [
+        "Ġtib",
+        "ik"
+      ],
+      [
+        "U",
+        "N"
+      ],
+      [
+        "a",
+        "ge"
+      ],
+      [
+        "a",
+        "to"
+      ],
+      [
+        "b",
+        "en"
+      ],
+      [
+        "e",
+        "gu"
+      ],
+      [
+        "i",
+        "ch"
+      ],
+      [
+        "t",
+        "inwek"
+      ],
+      [
+        "w",
+        "e"
+      ],
+      [
+        "Ġko",
+        "ik"
+      ],
+      [
+        "in",
+        "em"
+      ],
+      [
+        "ĠK",
+        "an"
+      ],
+      [
+        "Ġb",
+        "ek"
+      ],
+      [
+        "ĠA",
+        "go"
+      ],
+      [
+        "is",
+        "ye"
+      ],
+      [
+        "Ġm",
+        "an"
+      ],
+      [
+        "ab",
+        "an"
+      ],
+      [
+        "ĠJ",
+        "ap"
+      ],
+      [
+        "ĠJ",
+        "ud"
+      ],
+      [
+        "Ġtu",
+        "pch"
+      ],
+      [
+        "ind",
+        "ab"
+      ],
+      [
+        "ind",
+        "oi"
+      ],
+      [
+        "ĠKi",
+        "b"
+      ],
+      [
+        "ĠKi",
+        "im"
+      ],
+      [
+        "Ġi",
+        "yoni"
+      ],
+      [
+        "or",
+        "u"
+      ],
+      [
+        "or",
+        "on"
+      ],
+      [
+        "Ġka",
+        "i"
+      ],
+      [
+        "Ġka",
+        "yomis"
+      ],
+      [
+        "Ġkom",
+        "os"
+      ],
+      [
+        "Ġkw",
+        "ony"
+      ],
+      [
+        "Ġkim",
+        "ur"
+      ],
+      [
+        "Ġwer",
+        "ikyik"
+      ],
+      [
+        "es",
+        "un"
+      ],
+      [
+        "as",
+        "is"
+      ],
+      [
+        "Ġag",
+        "ine"
+      ],
+      [
+        "Ġso",
+        "ptos"
+      ],
+      [
+        "Ġor",
+        "tinwek"
+      ],
+      [
+        "Ġkony",
+        "ek"
+      ],
+      [
+        "ĠEn",
+        "ok"
+      ],
+      [
+        "Ġkos",
+        "ob"
+      ],
+      [
+        "Ġkome",
+        "e"
+      ],
+      [
+        "Ġkago",
+        "sich"
+      ],
+      [
+        "Ġkingo",
+        "bata"
+      ],
+      [
+        "ala",
+        "l"
+      ],
+      [
+        "Ġme",
+        "et"
+      ],
+      [
+        "Ġkoskol",
+        "eny"
+      ],
+      [
+        "ĠKan",
+        "an"
+      ],
+      [
+        "ĠJap",
+        "et"
+      ],
+      [
+        "g",
+        "as"
+      ],
+      [
+        "i",
+        "en"
+      ],
+      [
+        "i",
+        "gu"
+      ],
+      [
+        "s",
+        "on"
+      ],
+      [
+        "s",
+        "ta"
+      ],
+      [
+        "u",
+        "m"
+      ],
+      [
+        "w",
+        "ong"
+      ],
+      [
+        "Ġ",
+        "W"
+      ],
+      [
+        "Ġ",
+        "yi"
+      ],
+      [
+        "Ġ",
+        "os"
+      ],
+      [
+        "Ġa",
+        "inet"
+      ],
+      [
+        "Ġko",
+        "geer"
+      ],
+      [
+        "et",
+        "ero"
+      ],
+      [
+        "ch",
+        "en"
+      ],
+      [
+        "Ġki",
+        "to"
+      ],
+      [
+        "Ġki",
+        "yo"
+      ],
+      [
+        "Ġki",
+        "im"
+      ],
+      [
+        "Ġki",
+        "geer"
+      ],
+      [
+        "ĠK",
+        "ik"
+      ],
+      [
+        "ĠK",
+        "om"
+      ],
+      [
+        "it",
+        "u"
+      ],
+      [
+        "Ġch",
+        "ang"
+      ],
+      [
+        "ĠA",
+        "r"
+      ],
+      [
+        "Ġm",
+        "uren"
+      ],
+      [
+        "ot",
+        "ik"
+      ],
+      [
+        "un",
+        "oto"
+      ],
+      [
+        "un",
+        "etab"
+      ],
+      [
+        "ge",
+        "s"
+      ],
+      [
+        "go",
+        "i"
+      ],
+      [
+        "Ġbo",
+        "isi"
+      ],
+      [
+        "er",
+        "et"
+      ],
+      [
+        "er",
+        "ur"
+      ],
+      [
+        "ĠKi",
+        "wo"
+      ],
+      [
+        "ĠKi",
+        "guure"
+      ],
+      [
+        "Ġi",
+        "yot"
+      ],
+      [
+        "or",
+        "i"
+      ],
+      [
+        "Ġs",
+        "isi"
+      ],
+      [
+        "eny",
+        "un"
+      ],
+      [
+        "ĠT",
+        "a"
+      ],
+      [
+        "ĠM",
+        "ami"
+      ],
+      [
+        "Ġkob",
+        "ot"
+      ],
+      [
+        "Ġkob",
+        "ata"
+      ],
+      [
+        "Ġmi",
+        "achen"
+      ],
+      [
+        "wo",
+        "wech"
+      ],
+      [
+        "Ġti",
+        "m"
+      ],
+      [
+        "end",
+        "ote"
+      ],
+      [
+        "Ġam",
+        "it"
+      ],
+      [
+        "Ġwer",
+        "inyin"
+      ],
+      [
+        "and",
+        "an"
+      ],
+      [
+        "eek",
+        "yi"
+      ],
+      [
+        "Ġan",
+        "o"
+      ],
+      [
+        "Ġor",
+        "it"
+      ],
+      [
+        "Ġkar",
+        "as"
+      ],
+      [
+        "Ġbetu",
+        "si"
+      ],
+      [
+        "Ġim",
+        "b"
+      ],
+      [
+        "Ġr",
+        "a"
+      ],
+      [
+        "geer",
+        "o"
+      ],
+      [
+        "ĠP",
+        "etero"
+      ],
+      [
+        "Ġkain",
+        "ennyi"
+      ],
+      [
+        "Ġbor",
+        "wek"
+      ],
+      [
+        "toi",
+        "yot"
+      ],
+      [
+        "Ġmis",
+        "ing"
+      ],
+      [
+        "Ġiam",
+        "e"
+      ],
+      [
+        "Ġkol",
+        "os"
+      ],
+      [
+        "Ġol",
+        "oto"
+      ],
+      [
+        "Ġkes",
+        "wek"
+      ],
+      [
+        "Ġalam",
+        "ala"
+      ],
+      [
+        "Ġkiya",
+        "ak"
+      ],
+      [
+        "Ġkomos",
+        "tab"
+      ],
+      [
+        "Ġkimur",
+        "toiyot"
+      ],
+      [
+        "Ġsisi",
+        "it"
+      ],
+      [
+        "C",
+        "H"
+      ],
+      [
+        "d",
+        "o"
+      ],
+      [
+        "e",
+        "la"
+      ],
+      [
+        "e",
+        "yai"
+      ],
+      [
+        "e",
+        "gis"
+      ],
+      [
+        "h",
+        "an"
+      ],
+      [
+        "n",
+        "e"
+      ],
+      [
+        "o",
+        "han"
+      ],
+      [
+        "w",
+        "eekyi"
+      ],
+      [
+        "y",
+        "in"
+      ],
+      [
+        "Ġ",
+        "R"
+      ],
+      [
+        "Ġ",
+        "om"
+      ],
+      [
+        "Ġ",
+        "ga"
+      ],
+      [
+        "Ġa",
+        "tindoniondoni"
+      ],
+      [
+        "en",
+        "nyu"
+      ],
+      [
+        "in",
+        "nyi"
+      ],
+      [
+        "Ġn",
+        "yi"
+      ],
+      [
+        "Ġki",
+        "ger"
+      ],
+      [
+        "on",
+        "oto"
+      ],
+      [
+        "Ġt",
+        "ah"
+      ],
+      [
+        "Ġt",
+        "oret"
+      ],
+      [
+        "it",
+        "it"
+      ],
+      [
+        "Ġne",
+        "b"
+      ],
+      [
+        "Ġch",
+        "u"
+      ],
+      [
+        "Ġch",
+        "am"
+      ],
+      [
+        "is",
+        "y"
+      ],
+      [
+        "un",
+        "o"
+      ],
+      [
+        "un",
+        "ek"
+      ],
+      [
+        "ab",
+        "u"
+      ],
+      [
+        "ĠJ",
+        "ohan"
+      ],
+      [
+        "Ġche",
+        "pt"
+      ],
+      [
+        "go",
+        "ito"
+      ],
+      [
+        "ĠKi",
+        "ib"
+      ],
+      [
+        "ĠKi",
+        "ing"
+      ],
+      [
+        "ut",
+        "iet"
+      ],
+      [
+        "ony",
+        "o"
+      ],
+      [
+        "Ġin",
+        "yo"
+      ],
+      [
+        "Ġin",
+        "oni"
+      ],
+      [
+        "Ġkom",
+        "wowech"
+      ],
+      [
+        "ĠT",
+        "ien"
+      ],
+      [
+        "Ġbet",
+        "unoto"
+      ],
+      [
+        "Ġkot",
+        "un"
+      ],
+      [
+        "Ġkot",
+        "eb"
+      ],
+      [
+        "Ġam",
+        "at"
+      ],
+      [
+        "ng",
+        "en"
+      ],
+      [
+        "Ġwer",
+        "it"
+      ],
+      [
+        "ĠI",
+        "m"
+      ],
+      [
+        "ĠI",
+        "ngen"
+      ],
+      [
+        "Ġor",
+        "itab"
+      ],
+      [
+        "Ġkony",
+        "o"
+      ],
+      [
+        "ĠH",
+        "ero"
+      ],
+      [
+        "Ġr",
+        "ir"
+      ],
+      [
+        "ĠTengek",
+        "to"
+      ],
+      [
+        "Ġkik",
+        "uren"
+      ],
+      [
+        "yan",
+        "j"
+      ],
+      [
+        "ĠP",
+        "at"
+      ],
+      [
+        "Ġkain",
+        "etab"
+      ],
+      [
+        "oti",
+        "ond"
+      ],
+      [
+        "ĠKit",
+        "ar"
+      ],
+      [
+        "ug",
+        "et"
+      ],
+      [
+        "Ġlak",
+        "w"
+      ],
+      [
+        "Ġkir",
+        "git"
+      ],
+      [
+        "Ġkoto",
+        "y"
+      ],
+      [
+        "yon",
+        "e"
+      ],
+      [
+        "Ġy",
+        "oton"
+      ],
+      [
+        "op",
+        "en"
+      ],
+      [
+        "ĠMet",
+        "us"
+      ],
+      [
+        "Ġnyal",
+        "ild"
+      ],
+      [
+        "Ġtul",
+        "onok"
+      ],
+      [
+        "Ġboisi",
+        "on"
+      ],
+      [
+        "Ġtim",
+        "in"
+      ],
+      [
+        "Ġga",
+        "a"
+      ],
+      [
+        "Ġtah",
+        "abu"
+      ],
+      [
+        "ĠJohan",
+        "a"
+      ],
+      [
+        "ĠKiing",
+        "en"
+      ],
+      [
+        "ĠHero",
+        "d"
+      ],
+      [
+        ")",
+        "!"
+      ],
+      [
+        "1",
+        "3"
+      ],
+      [
+        "1",
+        "4"
+      ],
+      [
+        "A",
+        "UN"
+      ],
+      [
+        "N",
+        "D"
+      ],
+      [
+        "U",
+        "K"
+      ],
+      [
+        "b",
+        "un"
+      ],
+      [
+        "g",
+        "i"
+      ],
+      [
+        "h",
+        "en"
+      ],
+      [
+        "h",
+        "es"
+      ],
+      [
+        "i",
+        "i"
+      ],
+      [
+        "i",
+        "p"
+      ],
+      [
+        "i",
+        "w"
+      ],
+      [
+        "i",
+        "yo"
+      ],
+      [
+        "k",
+        "ony"
+      ],
+      [
+        "o",
+        "isi"
+      ],
+      [
+        "o",
+        "len"
+      ],
+      [
+        "o",
+        "yet"
+      ],
+      [
+        "r",
+        "e"
+      ],
+      [
+        "t",
+        "ang"
+      ],
+      [
+        "t",
+        "egis"
+      ],
+      [
+        "u",
+        "p"
+      ],
+      [
+        "u",
+        "u"
+      ],
+      [
+        "w",
+        "w"
+      ],
+      [
+        "w",
+        "ar"
+      ],
+      [
+        "Â",
+        "©"
+      ],
+      [
+        "Ġ",
+        "ik"
+      ],
+      [
+        "Ġ",
+        "ind"
+      ],
+      [
+        "Ġ",
+        "ong"
+      ],
+      [
+        "Ġ",
+        "Â©"
+      ],
+      [
+        "Ġk",
+        "amuktaindet"
+      ],
+      [
+        "Ġk",
+        "eb"
+      ],
+      [
+        "Ġk",
+        "uren"
+      ],
+      [
+        "Ġa",
+        "yan"
+      ],
+      [
+        "Ġa",
+        "tegis"
+      ],
+      [
+        "Ġko",
+        "si"
+      ],
+      [
+        "Ġko",
+        "ya"
+      ],
+      [
+        "et",
+        "ugul"
+      ],
+      [
+        "ch",
+        "oton"
+      ],
+      [
+        "Ġn",
+        "i"
+      ],
+      [
+        "Ġn",
+        "ek"
+      ],
+      [
+        "Ġn",
+        "yanj"
+      ],
+      [
+        "on",
+        "a"
+      ],
+      [
+        "on",
+        "ech"
+      ],
+      [
+        "ĠK",
+        "I"
+      ],
+      [
+        "ĠK",
+        "w"
+      ],
+      [
+        "ĠK",
+        "ok"
+      ],
+      [
+        "ĠK",
+        "ing"
+      ],
+      [
+        "ĠK",
+        "onyo"
+      ],
+      [
+        "Ġt",
+        "o"
+      ],
+      [
+        "Ġb",
+        "any"
+      ],
+      [
+        "ek",
+        "tab"
+      ],
+      [
+        "it",
+        "h"
+      ],
+      [
+        "Ġne",
+        "lel"
+      ],
+      [
+        "am",
+        "in"
+      ],
+      [
+        "ĠA",
+        "la"
+      ],
+      [
+        "ĠA",
+        "tindoni"
+      ],
+      [
+        "ĠA",
+        "tindoniondoni"
+      ],
+      [
+        "Ġm",
+        "enyin"
+      ],
+      [
+        "Ġm",
+        "esun"
+      ],
+      [
+        "ot",
+        "in"
+      ],
+      [
+        "ot",
+        "ikab"
+      ],
+      [
+        "ab",
+        "oyet"
+      ],
+      [
+        "ĠJ",
+        "E"
+      ],
+      [
+        "Ġche",
+        "mi"
+      ],
+      [
+        "Ġbo",
+        "l"
+      ],
+      [
+        "er",
+        "etab"
+      ],
+      [
+        "er",
+        "son"
+      ],
+      [
+        "Ġng",
+        "anas"
+      ],
+      [
+        "si",
+        "gis"
+      ],
+      [
+        "ĠKi",
+        "yai"
+      ],
+      [
+        "ut",
+        "o"
+      ],
+      [
+        "ut",
+        "unetab"
+      ],
+      [
+        "Ġi",
+        "l"
+      ],
+      [
+        "Ġi",
+        "le"
+      ],
+      [
+        "Ġi",
+        "al"
+      ],
+      [
+        "Ġi",
+        "yan"
+      ],
+      [
+        "or",
+        "g"
+      ],
+      [
+        "Ġs",
+        "os"
+      ],
+      [
+        "Ġin",
+        "ai"
+      ],
+      [
+        "Ġin",
+        "egei"
+      ],
+      [
+        "Ġin",
+        "yon"
+      ],
+      [
+        "Ġin",
+        "ne"
+      ],
+      [
+        "la",
+        "ik"
+      ],
+      [
+        "ĠN",
+        "gol"
+      ],
+      [
+        "ĠN",
+        "yone"
+      ],
+      [
+        "to",
+        "gis"
+      ],
+      [
+        "ĠT",
+        "oret"
+      ],
+      [
+        "ĠT",
+        "AUN"
+      ],
+      [
+        "at",
+        "i"
+      ],
+      [
+        "om",
+        "an"
+      ],
+      [
+        "ĠM",
+        "el"
+      ],
+      [
+        "ĠE",
+        "e"
+      ],
+      [
+        "Ġany",
+        "or"
+      ],
+      [
+        "Ġw",
+        "ww"
+      ],
+      [
+        "yo",
+        "e"
+      ],
+      [
+        "end",
+        "i"
+      ],
+      [
+        "end",
+        "oti"
+      ],
+      [
+        "ei",
+        "yet"
+      ],
+      [
+        "ji",
+        "ren"
+      ],
+      [
+        "Ġl",
+        "aboyet"
+      ],
+      [
+        "Ġo",
+        "am"
+      ],
+      [
+        "ĠB",
+        "oisi"
+      ],
+      [
+        "ĠS",
+        "oman"
+      ],
+      [
+        "es",
+        "hen"
+      ],
+      [
+        "Ġag",
+        "etugul"
+      ],
+      [
+        "Ġsob",
+        "enyun"
+      ],
+      [
+        "Ġich",
+        "eru"
+      ],
+      [
+        "eb",
+        "et"
+      ],
+      [
+        "Ġkor",
+        "oron"
+      ],
+      [
+        "Ġkeny",
+        "oru"
+      ],
+      [
+        "Ġkig",
+        "i"
+      ],
+      [
+        "Ġan",
+        "e"
+      ],
+      [
+        "Ġso",
+        "g"
+      ],
+      [
+        "us",
+        "wek"
+      ],
+      [
+        "Ġor",
+        "et"
+      ],
+      [
+        "Ġkony",
+        "il"
+      ],
+      [
+        "Ġkony",
+        "oun"
+      ],
+      [
+        "Ch",
+        "utunetab"
+      ],
+      [
+        "Ġma",
+        "g"
+      ],
+      [
+        "Ġma",
+        "che"
+      ],
+      [
+        "Ġma",
+        "laik"
+      ],
+      [
+        "ĠKo",
+        "yoe"
+      ],
+      [
+        "ĠEn",
+        "os"
+      ],
+      [
+        "ĠL",
+        "eshen"
+      ],
+      [
+        "Ġim",
+        "wochi"
+      ],
+      [
+        "Ġmie",
+        "indab"
+      ],
+      [
+        "ĠH",
+        "ug"
+      ],
+      [
+        "ĠCh",
+        "ebet"
+      ],
+      [
+        "Ġkok",
+        "onech"
+      ],
+      [
+        "ĠTengek",
+        "wogik"
+      ],
+      [
+        "ĠTengek",
+        "wokikyuk"
+      ],
+      [
+        "ĠTengek",
+        "tang"
+      ],
+      [
+        "Ġkik",
+        "eyai"
+      ],
+      [
+        "ĠKip",
+        "sigis"
+      ],
+      [
+        "wok",
+        "ikab"
+      ],
+      [
+        "Ġkome",
+        "chi"
+      ],
+      [
+        "ĠAm",
+        "en"
+      ],
+      [
+        "ĠAm",
+        "at"
+      ],
+      [
+        "Ġbar",
+        "a"
+      ],
+      [
+        "Ġasi",
+        "bun"
+      ],
+      [
+        "Ġbor",
+        "to"
+      ],
+      [
+        "Ġbor",
+        "ori"
+      ],
+      [
+        "Ġkergeind",
+        "anyi"
+      ],
+      [
+        "Ġya",
+        "chen"
+      ],
+      [
+        "Ġkab",
+        "us"
+      ],
+      [
+        "ĠEd",
+        "war"
+      ],
+      [
+        "pch",
+        "ei"
+      ],
+      [
+        "Ġla",
+        "pk"
+      ],
+      [
+        "ĠIn",
+        "c"
+      ],
+      [
+        "ĠNg",
+        "w"
+      ],
+      [
+        "de",
+        "ito"
+      ],
+      [
+        "Ġis",
+        "om"
+      ],
+      [
+        "Ġkem",
+        "i"
+      ],
+      [
+        "Ġkem",
+        "oi"
+      ],
+      [
+        "ĠKisi",
+        "ben"
+      ],
+      [
+        "ĠKisi",
+        "re"
+      ],
+      [
+        "Ġkosk",
+        "olen"
+      ],
+      [
+        "alek",
+        "uk"
+      ],
+      [
+        "Ġmbar",
+        "etab"
+      ],
+      [
+        "..",
+        "."
+      ],
+      [
+        "Ġit",
+        "ond"
+      ],
+      [
+        "ĠMet",
+        "indoi"
+      ],
+      [
+        "19",
+        "14"
+      ],
+      [
+        "20",
+        "20"
+      ],
+      [
+        "Ġ1",
+        "19"
+      ],
+      [
+        "Ġkur",
+        "eretab"
+      ],
+      [
+        "Ġtengek",
+        "wokikyuk"
+      ],
+      [
+        "ĠKich",
+        "eru"
+      ],
+      [
+        "Ġkwand",
+        "ab"
+      ],
+      [
+        "Ġkicham",
+        "in"
+      ],
+      [
+        "ĠAs",
+        "amin"
+      ],
+      [
+        "arta",
+        "t"
+      ],
+      [
+        "ĠLa",
+        "gok"
+      ],
+      [
+        "Ġiman",
+        "it"
+      ],
+      [
+        "ĠJud",
+        "ith"
+      ],
+      [
+        "sta",
+        "ir"
+      ],
+      [
+        "Ġkito",
+        "mo"
+      ],
+      [
+        "Ġkiyo",
+        "ech"
+      ],
+      [
+        "ĠKiwo",
+        "le"
+      ],
+      [
+        "ĠTa",
+        "unet"
+      ],
+      [
+        "Ġamit",
+        "wogik"
+      ],
+      [
+        "Ġkolos",
+        "unet"
+      ],
+      [
+        "Ġalamala",
+        "ik"
+      ],
+      [
+        "Ġom",
+        "eng"
+      ],
+      [
+        "Ġneb",
+        "unu"
+      ],
+      [
+        "Ġcham",
+        "chinet"
+      ],
+      [
+        "Ġinyo",
+        "iw"
+      ],
+      [
+        "ĠTien",
+        "wokikab"
+      ],
+      [
+        "ĠPat",
+        "erson"
+      ],
+      [
+        "Ġlakw",
+        "eng"
+      ],
+      [
+        "open",
+        "u"
+      ],
+      [
+        "Ġboision",
+        "ikyik"
+      ],
+      [
+        "13",
+        "0"
+      ],
+      [
+        "kony",
+        "oun"
+      ],
+      [
+        "Ġik",
+        "openu"
+      ],
+      [
+        "Ġayan",
+        "i"
+      ],
+      [
+        "Ġategis",
+        "in"
+      ],
+      [
+        "ĠKok",
+        "onok"
+      ],
+      [
+        "Ġbany",
+        "ek"
+      ],
+      [
+        "ĠAla",
+        "stair"
+      ],
+      [
+        "ĠAtindoni",
+        "ot"
+      ],
+      [
+        "Ġmesun",
+        "deito"
+      ],
+      [
+        "Ġial",
+        "de"
+      ],
+      [
+        "Ġsos",
+        "om"
+      ],
+      [
+        "ĠNgol",
+        "yot"
+      ],
+      [
+        "ĠToret",
+        "on"
+      ],
+      [
+        "ĠTAUN",
+        "ET"
+      ],
+      [
+        "ĠMel",
+        "ektab"
+      ],
+      [
+        "jiren",
+        "ik"
+      ],
+      [
+        "ĠBoisi",
+        "en"
+      ],
+      [
+        "ĠLeshen",
+        "it"
+      ],
+      [
+        "ĠHug",
+        "hes"
+      ],
+      [
+        "Ġborori",
+        "osiek"
+      ],
+      [
+        "ĠEdwar",
+        "d"
+      ],
+      [
+        "Ġlapk",
+        "eiyet"
+      ],
+      [
+        "Ġinyoiw",
+        "on"
+      ],
+      [
+        "?",
+        "\""
+      ],
+      [
+        "A",
+        "I"
+      ],
+      [
+        "I",
+        "S"
+      ],
+      [
+        "O",
+        "R"
+      ],
+      [
+        "a",
+        "e"
+      ],
+      [
+        "a",
+        "el"
+      ],
+      [
+        "d",
+        "a"
+      ],
+      [
+        "d",
+        "et"
+      ],
+      [
+        "e",
+        "e"
+      ],
+      [
+        "e",
+        "it"
+      ],
+      [
+        "e",
+        "si"
+      ],
+      [
+        "g",
+        "an"
+      ],
+      [
+        "k",
+        "wa"
+      ],
+      [
+        "o",
+        "ik"
+      ],
+      [
+        "r",
+        "ek"
+      ],
+      [
+        "Ġ",
+        "2"
+      ],
+      [
+        "Ġ",
+        "3"
+      ],
+      [
+        "Ġ",
+        "D"
+      ],
+      [
+        "Ġ",
+        "U"
+      ],
+      [
+        "Ġ",
+        "le"
+      ],
+      [
+        "en",
+        "an"
+      ],
+      [
+        "Ġko",
+        "ib"
+      ],
+      [
+        "Ġko",
+        "ger"
+      ],
+      [
+        "Ġko",
+        "gochi"
+      ],
+      [
+        "in",
+        "ik"
+      ],
+      [
+        "Ġki",
+        "le"
+      ],
+      [
+        "Ġki",
+        "lenji"
+      ],
+      [
+        "on",
+        "ji"
+      ],
+      [
+        "ĠK",
+        "us"
+      ],
+      [
+        "ĠK",
+        "enan"
+      ],
+      [
+        "Ġt",
+        "or"
+      ],
+      [
+        "Ġt",
+        "og"
+      ],
+      [
+        "it",
+        "ei"
+      ],
+      [
+        "ik",
+        "yi"
+      ],
+      [
+        "ĠA",
+        "K"
+      ],
+      [
+        "is",
+        "yet"
+      ],
+      [
+        "Ġm",
+        "at"
+      ],
+      [
+        "Ġm",
+        "ami"
+      ],
+      [
+        "ĠJ",
+        "aret"
+      ],
+      [
+        "gu",
+        "ren"
+      ],
+      [
+        "gu",
+        "tab"
+      ],
+      [
+        "ar",
+        "a"
+      ],
+      [
+        "Ġng",
+        "uno"
+      ],
+      [
+        "Ġi",
+        "yai"
+      ],
+      [
+        "or",
+        "unet"
+      ],
+      [
+        "Ġs",
+        "or"
+      ],
+      [
+        "Ġka",
+        "s"
+      ],
+      [
+        "Ġka",
+        "kwa"
+      ],
+      [
+        "ok",
+        "yin"
+      ],
+      [
+        "Ġin",
+        "go"
+      ],
+      [
+        "ye",
+        "s"
+      ],
+      [
+        "Ġkom",
+        "wochi"
+      ],
+      [
+        "ĠT",
+        "am"
+      ],
+      [
+        "at",
+        "et"
+      ],
+      [
+        "bo",
+        "i"
+      ],
+      [
+        "em",
+        "ei"
+      ],
+      [
+        "ĠE",
+        "N"
+      ],
+      [
+        "Ġkot",
+        "es"
+      ],
+      [
+        "Ġti",
+        "r"
+      ],
+      [
+        "es",
+        "age"
+      ],
+      [
+        "Ġag",
+        "ot"
+      ],
+      [
+        "Ġkor",
+        "ob"
+      ],
+      [
+        "ĠKa",
+        "in"
+      ],
+      [
+        "any",
+        "in"
+      ],
+      [
+        "Ġor",
+        "etab"
+      ],
+      [
+        "Ġkon",
+        "om"
+      ],
+      [
+        "Ġkon",
+        "ai"
+      ],
+      [
+        "Ġkit",
+        "eb"
+      ],
+      [
+        "Ġr",
+        "u"
+      ],
+      [
+        "ĠCh",
+        "u"
+      ],
+      [
+        "Ġke",
+        "am"
+      ],
+      [
+        "ger",
+        "ge"
+      ],
+      [
+        "ĠO",
+        "geero"
+      ],
+      [
+        "ala",
+        "lel"
+      ],
+      [
+        "obe",
+        "gu"
+      ],
+      [
+        "Ġkir",
+        "er"
+      ],
+      [
+        "Ġta",
+        "itab"
+      ],
+      [
+        "ud",
+        "ik"
+      ],
+      [
+        "Ġe",
+        "ut"
+      ],
+      [
+        "isto",
+        "en"
+      ],
+      [
+        "ĠMa",
+        "alalel"
+      ],
+      [
+        "Ġot",
+        "esage"
+      ],
+      [
+        "ĠKin",
+        "go"
+      ],
+      [
+        "Ġtengek",
+        "to"
+      ],
+      [
+        "inem",
+        "une"
+      ],
+      [
+        "ĠKib",
+        "a"
+      ],
+      [
+        "Ġkayomis",
+        "et"
+      ],
+      [
+        "Ġortinwek",
+        "wak"
+      ],
+      [
+        "igu",
+        "k"
+      ],
+      [
+        "ĠW",
+        "er"
+      ],
+      [
+        "Ġkobot",
+        "ok"
+      ],
+      [
+        "Ġimb",
+        "ar"
+      ],
+      [
+        "Ġtoret",
+        "i"
+      ],
+      [
+        "Ġkoteb",
+        "i"
+      ],
+      [
+        "ĠMetus",
+        "ela"
+      ],
+      [
+        "Ġnyalild",
+        "a"
+      ],
+      [
+        "ii",
+        "ye"
+      ],
+      [
+        "Ġind",
+        "aret"
+      ],
+      [
+        "ĠKw",
+        "ondo"
+      ],
+      [
+        "Ġbol",
+        "det"
+      ],
+      [
+        "Ġbara",
+        "gutab"
+      ],
+      [
+        "esi",
+        "o"
+      ],
+      [
+        "!",
+        "\""
+      ],
+      [
+        "'",
+        "."
+      ],
+      [
+        "'",
+        ";"
+      ],
+      [
+        "1",
+        "6"
+      ],
+      [
+        "K",
+        "a"
+      ],
+      [
+        "a",
+        "et"
+      ],
+      [
+        "a",
+        "le"
+      ],
+      [
+        "a",
+        "anda"
+      ],
+      [
+        "e",
+        "et"
+      ],
+      [
+        "e",
+        "chi"
+      ],
+      [
+        "e",
+        "iso"
+      ],
+      [
+        "g",
+        "isi"
+      ],
+      [
+        "i",
+        "d"
+      ],
+      [
+        "i",
+        "on"
+      ],
+      [
+        "i",
+        "chi"
+      ],
+      [
+        "j",
+        "eiso"
+      ],
+      [
+        "l",
+        "os"
+      ],
+      [
+        "m",
+        "a"
+      ],
+      [
+        "m",
+        "ir"
+      ],
+      [
+        "o",
+        "gis"
+      ],
+      [
+        "o",
+        "che"
+      ],
+      [
+        "r",
+        "at"
+      ],
+      [
+        "s",
+        "ei"
+      ],
+      [
+        "t",
+        "er"
+      ],
+      [
+        "t",
+        "ok"
+      ],
+      [
+        "u",
+        "uny"
+      ],
+      [
+        "w",
+        "ot"
+      ],
+      [
+        "w",
+        "er"
+      ],
+      [
+        "y",
+        "am"
+      ],
+      [
+        "y",
+        "um"
+      ],
+      [
+        "z",
+        "ar"
+      ],
+      [
+        "Ġ",
+        "ony"
+      ],
+      [
+        "Ġ",
+        "ok"
+      ],
+      [
+        "Ġ",
+        "isi"
+      ],
+      [
+        "Ġ",
+        "lel"
+      ],
+      [
+        "Ġ",
+        "jeiso"
+      ],
+      [
+        "Ġk",
+        "ech"
+      ],
+      [
+        "Ġa",
+        "s"
+      ],
+      [
+        "en",
+        "i"
+      ],
+      [
+        "en",
+        "en"
+      ],
+      [
+        "Ġko",
+        "w"
+      ],
+      [
+        "Ġko",
+        "ch"
+      ],
+      [
+        "Ġko",
+        "it"
+      ],
+      [
+        "Ġko",
+        "la"
+      ],
+      [
+        "ch",
+        "u"
+      ],
+      [
+        "Ġn",
+        "jirenik"
+      ],
+      [
+        "Ġn",
+        "aet"
+      ],
+      [
+        "Ġki",
+        "s"
+      ],
+      [
+        "Ġki",
+        "ch"
+      ],
+      [
+        "Ġki",
+        "ang"
+      ],
+      [
+        "on",
+        "on"
+      ],
+      [
+        "on",
+        "ut"
+      ],
+      [
+        "on",
+        "indo"
+      ],
+      [
+        "ĠK",
+        "A"
+      ],
+      [
+        "ĠK",
+        "ab"
+      ],
+      [
+        "ĠK",
+        "ito"
+      ],
+      [
+        "Ġt",
+        "er"
+      ],
+      [
+        "Ġb",
+        "unu"
+      ],
+      [
+        "Ġne",
+        "o"
+      ],
+      [
+        "Ġch",
+        "ek"
+      ],
+      [
+        "Ġch",
+        "or"
+      ],
+      [
+        "Ġch",
+        "oto"
+      ],
+      [
+        "is",
+        "ta"
+      ],
+      [
+        "Ġm",
+        "ing"
+      ],
+      [
+        "Ġm",
+        "ugu"
+      ],
+      [
+        "Ġm",
+        "obegu"
+      ],
+      [
+        "un",
+        "ny"
+      ],
+      [
+        "un",
+        "oton"
+      ],
+      [
+        "Ġche",
+        "m"
+      ],
+      [
+        "er",
+        "ech"
+      ],
+      [
+        "er",
+        "unek"
+      ],
+      [
+        "ta",
+        "i"
+      ],
+      [
+        "Ġng",
+        "wek"
+      ],
+      [
+        "ĠKi",
+        "it"
+      ],
+      [
+        "ĠKi",
+        "lenji"
+      ],
+      [
+        "Ġi",
+        "weekyi"
+      ],
+      [
+        "ĠAk",
+        "o"
+      ],
+      [
+        "indet",
+        "ab"
+      ],
+      [
+        "Ġs",
+        "uswek"
+      ],
+      [
+        "Ġs",
+        "erunek"
+      ],
+      [
+        "Ġka",
+        "am"
+      ],
+      [
+        "Ġka",
+        "ag"
+      ],
+      [
+        "Ġka",
+        "tok"
+      ],
+      [
+        "eny",
+        "wan"
+      ],
+      [
+        "ye",
+        "i"
+      ],
+      [
+        "Ġkom",
+        "ut"
+      ],
+      [
+        "Ġkom",
+        "onut"
+      ],
+      [
+        "ĠT",
+        "os"
+      ],
+      [
+        "at",
+        "in"
+      ],
+      [
+        "Ġkw",
+        "ong"
+      ],
+      [
+        "ĠM",
+        "i"
+      ],
+      [
+        "Ġkim",
+        "ong"
+      ],
+      [
+        "Ġkob",
+        "ut"
+      ],
+      [
+        "Ġkob",
+        "wa"
+      ],
+      [
+        "Ġkob",
+        "at"
+      ],
+      [
+        "chi",
+        "gei"
+      ],
+      [
+        "Ġkot",
+        "u"
+      ],
+      [
+        "Ġkot",
+        "ebe"
+      ],
+      [
+        "os",
+        "obe"
+      ],
+      [
+        "Ġchi",
+        "choton"
+      ],
+      [
+        "Ġkin",
+        "ae"
+      ],
+      [
+        "Ġam",
+        "et"
+      ],
+      [
+        "Ġam",
+        "un"
+      ],
+      [
+        "Ġket",
+        "ikab"
+      ],
+      [
+        "ĠB",
+        "et"
+      ],
+      [
+        "Ġwer",
+        "iguk"
+      ],
+      [
+        "Ġbetut",
+        "ab"
+      ],
+      [
+        "ir",
+        "mir"
+      ],
+      [
+        "ĠI",
+        "mi"
+      ],
+      [
+        "Ġkor",
+        "ib"
+      ],
+      [
+        "Ġkor",
+        "otikab"
+      ],
+      [
+        "ai",
+        "m"
+      ],
+      [
+        "any",
+        "or"
+      ],
+      [
+        "any",
+        "wan"
+      ],
+      [
+        "Ġso",
+        "etab"
+      ],
+      [
+        "us",
+        "yi"
+      ],
+      [
+        "Ġkony",
+        "or"
+      ],
+      [
+        "Ġma",
+        "ta"
+      ],
+      [
+        "im",
+        "it"
+      ],
+      [
+        "Ġkon",
+        "am"
+      ],
+      [
+        "Ġkon",
+        "de"
+      ],
+      [
+        "Ġker",
+        "gei"
+      ],
+      [
+        "ĠCh",
+        "uto"
+      ],
+      [
+        "ĠKim",
+        "ok"
+      ],
+      [
+        "Ġke",
+        "wet"
+      ],
+      [
+        "ĠY",
+        "a"
+      ],
+      [
+        "Ġing",
+        "en"
+      ],
+      [
+        "Ġing",
+        "ot"
+      ],
+      [
+        "ata",
+        "i"
+      ],
+      [
+        "lel",
+        "d"
+      ],
+      [
+        "Ġkain",
+        "aik"
+      ],
+      [
+        "ĠO",
+        "iiye"
+      ],
+      [
+        "chin",
+        "i"
+      ],
+      [
+        "Ġkago",
+        "chin"
+      ],
+      [
+        "Ġketit",
+        "ab"
+      ],
+      [
+        "Ġngw",
+        "ony"
+      ],
+      [
+        "ach",
+        "e"
+      ],
+      [
+        "Ġkipk",
+        "osobe"
+      ],
+      [
+        "Ġkwen",
+        "unny"
+      ],
+      [
+        "Ġta",
+        "unet"
+      ],
+      [
+        "ub",
+        "al"
+      ],
+      [
+        "inwek",
+        "wak"
+      ],
+      [
+        "ĠKisi",
+        "ch"
+      ],
+      [
+        "alek",
+        "ab"
+      ],
+      [
+        "pk",
+        "eit"
+      ],
+      [
+        "Ġy",
+        "oto"
+      ],
+      [
+        "Ġkam",
+        "et"
+      ],
+      [
+        "Ġkii",
+        "gochi"
+      ],
+      [
+        "Ġkag",
+        "ich"
+      ],
+      [
+        "Ġot",
+        "wog"
+      ],
+      [
+        "Ġkiib",
+        "erur"
+      ],
+      [
+        "ĠAs",
+        "ur"
+      ],
+      [
+        "ĠLa",
+        "zar"
+      ],
+      [
+        "ĠIngo",
+        "b"
+      ],
+      [
+        "egu",
+        "k"
+      ],
+      [
+        "Ġman",
+        "ong"
+      ],
+      [
+        "Ġman",
+        "ag"
+      ],
+      [
+        "ĠKiim",
+        "ut"
+      ],
+      [
+        "Ġkai",
+        "yai"
+      ],
+      [
+        "Ġkayomis",
+        "ennyu"
+      ],
+      [
+        "Ġkwony",
+        "ik"
+      ],
+      [
+        "Ġkonyek",
+        "wak"
+      ],
+      [
+        "Ġyi",
+        "ei"
+      ],
+      [
+        "Ġyi",
+        "emei"
+      ],
+      [
+        "Ġkiim",
+        "uuny"
+      ],
+      [
+        "ĠKom",
+        "wa"
+      ],
+      [
+        "Ġkaras",
+        "ato"
+      ],
+      [
+        "Ġbetusi",
+        "ech"
+      ],
+      [
+        "Ġbetusi",
+        "eguk"
+      ],
+      [
+        "Ġchept",
+        "ug"
+      ],
+      [
+        "Ġrir",
+        "et"
+      ],
+      [
+        "otiond",
+        "ennyi"
+      ],
+      [
+        "iyo",
+        "gei"
+      ],
+      [
+        "Ġkeb",
+        "ar"
+      ],
+      [
+        "Ġkosi",
+        "ir"
+      ],
+      [
+        "Ġkoya",
+        "togis"
+      ],
+      [
+        "Ġnyanj",
+        "osiek"
+      ],
+      [
+        "Ġsog",
+        "ek"
+      ],
+      [
+        "Ġkabus",
+        "etab"
+      ],
+      [
+        "Ġbororiosiek",
+        "wak"
+      ],
+      [
+        "Ġtog",
+        "eng"
+      ],
+      [
+        "Ġsor",
+        "un"
+      ],
+      [
+        "Ġkakwa",
+        "utik"
+      ],
+      [
+        "okyin",
+        "gei"
+      ],
+      [
+        "yes",
+        "yo"
+      ],
+      [
+        "Ġok",
+        "wek"
+      ],
+      [
+        "Ġlel",
+        "ut"
+      ],
+      [
+        "Ġmugu",
+        "leld"
+      ],
+      [
+        "Ġiweekyi",
+        "ge"
+      ],
+      [
+        "Ġkwenunny",
+        "o"
+      ],
+      [
+        "Ġkagich",
+        "ub"
+      ],
+      [
+        "ĠLazar",
+        "us"
+      ],
+      [
+        "A",
+        "H"
+      ],
+      [
+        "E",
+        "CH"
+      ],
+      [
+        "H",
+        "O"
+      ],
+      [
+        "I",
+        "K"
+      ],
+      [
+        "K",
+        "ak"
+      ],
+      [
+        "O",
+        "B"
+      ],
+      [
+        "O",
+        "b"
+      ],
+      [
+        "T",
+        "O"
+      ],
+      [
+        "U",
+        "G"
+      ],
+      [
+        "V",
+        "AH"
+      ],
+      [
+        "Y",
+        "AI"
+      ],
+      [
+        "a",
+        "am"
+      ],
+      [
+        "e",
+        "le"
+      ],
+      [
+        "e",
+        "lel"
+      ],
+      [
+        "e",
+        "git"
+      ],
+      [
+        "e",
+        "get"
+      ],
+      [
+        "g",
+        "ona"
+      ],
+      [
+        "g",
+        "artat"
+      ],
+      [
+        "i",
+        "etab"
+      ],
+      [
+        "j",
+        "in"
+      ],
+      [
+        "k",
+        "otik"
+      ],
+      [
+        "l",
+        "is"
+      ],
+      [
+        "l",
+        "ot"
+      ],
+      [
+        "l",
+        "ji"
+      ],
+      [
+        "m",
+        "b"
+      ],
+      [
+        "m",
+        "y"
+      ],
+      [
+        "m",
+        "en"
+      ],
+      [
+        "n",
+        "ge"
+      ],
+      [
+        "n",
+        "ger"
+      ],
+      [
+        "n",
+        "atet"
+      ],
+      [
+        "o",
+        "pch"
+      ],
+      [
+        "r",
+        "on"
+      ],
+      [
+        "r",
+        "is"
+      ],
+      [
+        "r",
+        "us"
+      ],
+      [
+        "r",
+        "iet"
+      ],
+      [
+        "s",
+        "et"
+      ],
+      [
+        "t",
+        "an"
+      ],
+      [
+        "u",
+        "chi"
+      ],
+      [
+        "u",
+        "siek"
+      ],
+      [
+        "u",
+        "iyogei"
+      ],
+      [
+        "y",
+        "ek"
+      ],
+      [
+        "y",
+        "ron"
+      ],
+      [
+        "Ġ",
+        "5"
+      ],
+      [
+        "Ġk",
+        "and"
+      ],
+      [
+        "Ġk",
+        "aman"
+      ],
+      [
+        "Ġa",
+        "yai"
+      ],
+      [
+        "Ġko",
+        "om"
+      ],
+      [
+        "Ġko",
+        "yo"
+      ],
+      [
+        "Ġko",
+        "isto"
+      ],
+      [
+        "Ġko",
+        "weekyi"
+      ],
+      [
+        "ch",
+        "ub"
+      ],
+      [
+        "in",
+        "nyu"
+      ],
+      [
+        "Ġn",
+        "am"
+      ],
+      [
+        "Ġn",
+        "go"
+      ],
+      [
+        "Ġn",
+        "eny"
+      ],
+      [
+        "Ġn",
+        "yo"
+      ],
+      [
+        "Ġak",
+        "w"
+      ],
+      [
+        "Ġki",
+        "los"
+      ],
+      [
+        "on",
+        "ik"
+      ],
+      [
+        "ĠK",
+        "e"
+      ],
+      [
+        "ĠK",
+        "on"
+      ],
+      [
+        "ĠK",
+        "ong"
+      ],
+      [
+        "ĠK",
+        "as"
+      ],
+      [
+        "Ġt",
+        "eng"
+      ],
+      [
+        "Ġt",
+        "ab"
+      ],
+      [
+        "Ġt",
+        "os"
+      ],
+      [
+        "Ġt",
+        "ilil"
+      ],
+      [
+        "it",
+        "a"
+      ],
+      [
+        "it",
+        "et"
+      ],
+      [
+        "Ġch",
+        "ok"
+      ],
+      [
+        "Ġch",
+        "al"
+      ],
+      [
+        "an",
+        "i"
+      ],
+      [
+        "an",
+        "ik"
+      ],
+      [
+        "ik",
+        "it"
+      ],
+      [
+        "ĠA",
+        "g"
+      ],
+      [
+        "ĠA",
+        "n"
+      ],
+      [
+        "ĠA",
+        "t"
+      ],
+      [
+        "is",
+        "ikyi"
+      ],
+      [
+        "Ġm",
+        "et"
+      ],
+      [
+        "Ġm",
+        "ak"
+      ],
+      [
+        "Ġm",
+        "iten"
+      ],
+      [
+        "Ġm",
+        "we"
+      ],
+      [
+        "ot",
+        "en"
+      ],
+      [
+        "ot",
+        "inwekwak"
+      ],
+      [
+        "ab",
+        "et"
+      ],
+      [
+        "ĠJ",
+        "ok"
+      ],
+      [
+        "gu",
+        "oten"
+      ],
+      [
+        "Ġche",
+        "pk"
+      ],
+      [
+        "ar",
+        "ik"
+      ],
+      [
+        "ar",
+        "at"
+      ],
+      [
+        "ar",
+        "aran"
+      ],
+      [
+        "ge",
+        "ch"
+      ],
+      [
+        "ind",
+        "anyi"
+      ],
+      [
+        "er",
+        "ing"
+      ],
+      [
+        "ta",
+        "yat"
+      ],
+      [
+        "ĠKi",
+        "g"
+      ],
+      [
+        "ĠKi",
+        "l"
+      ],
+      [
+        "ĠKi",
+        "ya"
+      ],
+      [
+        "ĠKi",
+        "gi"
+      ],
+      [
+        "ĠKi",
+        "guren"
+      ],
+      [
+        "ĠJehov",
+        "a"
+      ],
+      [
+        "ĠAk",
+        "ot"
+      ],
+      [
+        "wa",
+        "e"
+      ],
+      [
+        "ya",
+        "ch"
+      ],
+      [
+        "ya",
+        "chini"
+      ],
+      [
+        "Ġs",
+        "a"
+      ],
+      [
+        "Ġka",
+        "p"
+      ],
+      [
+        "Ġka",
+        "tab"
+      ],
+      [
+        "Ġka",
+        "pt"
+      ],
+      [
+        "Ġin",
+        "at"
+      ],
+      [
+        "Ġin",
+        "gor"
+      ],
+      [
+        "ĠN",
+        "i"
+      ],
+      [
+        "eny",
+        "wa"
+      ],
+      [
+        "ob",
+        "ek"
+      ],
+      [
+        "il",
+        "lot"
+      ],
+      [
+        "Ġkom",
+        "anda"
+      ],
+      [
+        "Ġkom",
+        "iten"
+      ],
+      [
+        "ĠT",
+        "ugu"
+      ],
+      [
+        "ĠT",
+        "ubal"
+      ],
+      [
+        "ĠT",
+        "UG"
+      ],
+      [
+        "isi",
+        "et"
+      ],
+      [
+        "isi",
+        "riet"
+      ],
+      [
+        "om",
+        "o"
+      ],
+      [
+        "om",
+        "en"
+      ],
+      [
+        "ĠM",
+        "ab"
+      ],
+      [
+        "ĠM",
+        "uren"
+      ],
+      [
+        "ĠM",
+        "aranet"
+      ],
+      [
+        "em",
+        "e"
+      ],
+      [
+        "Ġkim",
+        "eng"
+      ],
+      [
+        "Ġkob",
+        "wat"
+      ],
+      [
+        "Ġkob",
+        "esio"
+      ],
+      [
+        "chi",
+        "rek"
+      ],
+      [
+        "wet",
+        "ab"
+      ],
+      [
+        "ĠE",
+        "ng"
+      ],
+      [
+        "ĠE",
+        "ber"
+      ],
+      [
+        "ĠE",
+        "lis"
+      ],
+      [
+        "Ġkot",
+        "inye"
+      ],
+      [
+        "Ġkot",
+        "indo"
+      ],
+      [
+        "Ġkot",
+        "uch"
+      ],
+      [
+        "Ġkot",
+        "aban"
+      ],
+      [
+        "Ġkot",
+        "okyingei"
+      ],
+      [
+        "Ġw",
+        "endote"
+      ],
+      [
+        "Ġw",
+        "endi"
+      ],
+      [
+        "Ġw",
+        "ikit"
+      ],
+      [
+        "Ġchi",
+        "chi"
+      ],
+      [
+        "ei",
+        "gei"
+      ],
+      [
+        "Ġl",
+        "obo"
+      ],
+      [
+        "Ġam",
+        "i"
+      ],
+      [
+        "Ġo",
+        "eng"
+      ],
+      [
+        "Ġo",
+        "geero"
+      ],
+      [
+        "ak",
+        "a"
+      ],
+      [
+        "ak",
+        "yi"
+      ],
+      [
+        "ĠB",
+        "yron"
+      ],
+      [
+        "ĠS",
+        "ila"
+      ],
+      [
+        "Ġwer",
+        "innyi"
+      ],
+      [
+        "es",
+        "ak"
+      ],
+      [
+        "as",
+        "aka"
+      ],
+      [
+        "Ġsob",
+        "ond"
+      ],
+      [
+        "Ġich",
+        "eget"
+      ],
+      [
+        "eb",
+        "a"
+      ],
+      [
+        "eb",
+        "en"
+      ],
+      [
+        "ir",
+        "ir"
+      ],
+      [
+        "Ġkor",
+        "ik"
+      ],
+      [
+        "Ġkor",
+        "ir"
+      ],
+      [
+        "Ġkor",
+        "ip"
+      ],
+      [
+        "ai",
+        "yat"
+      ],
+      [
+        "wan",
+        "indo"
+      ],
+      [
+        "wan",
+        "ato"
+      ],
+      [
+        "Ġkig",
+        "as"
+      ],
+      [
+        "Ġkig",
+        "artat"
+      ],
+      [
+        "ĠKa",
+        "go"
+      ],
+      [
+        "Ġor",
+        "iny"
+      ],
+      [
+        "Ġkar",
+        "wat"
+      ],
+      [
+        "Ġkony",
+        "i"
+      ],
+      [
+        "Ġkony",
+        "in"
+      ],
+      [
+        "Ġbeek",
+        "ab"
+      ],
+      [
+        "im",
+        "wa"
+      ],
+      [
+        "im",
+        "egit"
+      ],
+      [
+        "ĠKo",
+        "ot"
+      ],
+      [
+        "ĠKo",
+        "le"
+      ],
+      [
+        "ĠAd",
+        "a"
+      ],
+      [
+        "Ġkon",
+        "u"
+      ],
+      [
+        "Ġkon",
+        "em"
+      ],
+      [
+        "Ġkon",
+        "do"
+      ],
+      [
+        "geny",
+        "in"
+      ],
+      [
+        "ĠL",
+        "uk"
+      ],
+      [
+        "Ġkos",
+        "opch"
+      ],
+      [
+        "Ġr",
+        "ur"
+      ],
+      [
+        "Ġkik",
+        "igu"
+      ],
+      [
+        "Ġke",
+        "ger"
+      ],
+      [
+        "Ġke",
+        "chirek"
+      ],
+      [
+        "ĠP",
+        "ila"
+      ],
+      [
+        "Ġem",
+        "a"
+      ],
+      [
+        "Ġem",
+        "etab"
+      ],
+      [
+        "Ġem",
+        "onoto"
+      ],
+      [
+        "Ġem",
+        "otinwekwak"
+      ],
+      [
+        "Ġkain",
+        "et"
+      ],
+      [
+        "Ġkain",
+        "utik"
+      ],
+      [
+        "Ġlogo",
+        "i"
+      ],
+      [
+        "oti",
+        "ot"
+      ],
+      [
+        "Ġkago",
+        "chinet"
+      ],
+      [
+        "Ġkergeind",
+        "anywan"
+      ],
+      [
+        "Ġkab",
+        "ung"
+      ],
+      [
+        "Ġkab",
+        "orunet"
+      ],
+      [
+        "Ġlogoek",
+        "yik"
+      ],
+      [
+        "ol",
+        "yot"
+      ],
+      [
+        "Ġkib",
+        "a"
+      ],
+      [
+        "Ġkib",
+        "unu"
+      ],
+      [
+        "Ġta",
+        "un"
+      ],
+      [
+        "Ġkobiit",
+        "u"
+      ],
+      [
+        "Ġkem",
+        "o"
+      ],
+      [
+        "Ġkoto",
+        "ok"
+      ],
+      [
+        "Ġe",
+        "unek"
+      ],
+      [
+        "cham",
+        "wech"
+      ],
+      [
+        "Ġara",
+        "wanato"
+      ],
+      [
+        "og",
+        "en"
+      ],
+      [
+        "op",
+        "ta"
+      ],
+      [
+        "Ġkobo",
+        "i"
+      ],
+      [
+        "ĠMa",
+        "illot"
+      ],
+      [
+        "ĠG",
+        "om"
+      ],
+      [
+        "Ġkut",
+        "innyi"
+      ],
+      [
+        "Ġkowek",
+        "yi"
+      ],
+      [
+        "Ġkomwa",
+        "chi"
+      ],
+      [
+        "Ġkwand",
+        "anyi"
+      ],
+      [
+        "ĠKii",
+        "gochi"
+      ],
+      [
+        "Ġkoki",
+        "yai"
+      ],
+      [
+        "Ġnyal",
+        "il"
+      ],
+      [
+        "anas",
+        "et"
+      ],
+      [
+        "Ġmo",
+        "goi"
+      ],
+      [
+        "Ġib",
+        "ati"
+      ],
+      [
+        "Ġkote",
+        "gisi"
+      ],
+      [
+        "Ġarawet",
+        "ab"
+      ],
+      [
+        "we",
+        "eigei"
+      ],
+      [
+        "inem",
+        "un"
+      ],
+      [
+        "aban",
+        "ab"
+      ],
+      [
+        "ĠJud",
+        "as"
+      ],
+      [
+        "Ġkogeer",
+        "e"
+      ],
+      [
+        "Ġkiim",
+        "ut"
+      ],
+      [
+        "Ġiyot",
+        "eng"
+      ],
+      [
+        "Ġkobot",
+        "en"
+      ],
+      [
+        "Ġkaras",
+        "ta"
+      ],
+      [
+        "Ġimb",
+        "aret"
+      ],
+      [
+        "Ġnyi",
+        "gis"
+      ],
+      [
+        "Ġnyi",
+        "gan"
+      ],
+      [
+        "itit",
+        "it"
+      ],
+      [
+        "isy",
+        "en"
+      ],
+      [
+        "isy",
+        "ek"
+      ],
+      [
+        "Ġchept",
+        "uget"
+      ],
+      [
+        "ĠIm",
+        "uch"
+      ],
+      [
+        "Ġrir",
+        "ek"
+      ],
+      [
+        "otiond",
+        "eng"
+      ],
+      [
+        "ND",
+        "ET"
+      ],
+      [
+        "uu",
+        "chi"
+      ],
+      [
+        "ĠKI",
+        "YAI"
+      ],
+      [
+        "ĠJE",
+        "IS"
+      ],
+      [
+        "ĠJE",
+        "HO"
+      ],
+      [
+        "Ġil",
+        "uu"
+      ],
+      [
+        "Ġmag",
+        "eng"
+      ],
+      [
+        "Ġmalaik",
+        "a"
+      ],
+      [
+        "Ġmalaik",
+        "aiyat"
+      ],
+      [
+        "Ġitond",
+        "anyi"
+      ],
+      [
+        "ĠU",
+        "nger"
+      ],
+      [
+        "Ġle",
+        "el"
+      ],
+      [
+        "Ġtor",
+        "or"
+      ],
+      [
+        "Ġkas",
+        "arta"
+      ],
+      [
+        "Ġingo",
+        "ek"
+      ],
+      [
+        "ĠTam",
+        "my"
+      ],
+      [
+        "Ġtir",
+        "isi"
+      ],
+      [
+        "Ġkorob",
+        "onji"
+      ],
+      [
+        "Ġru",
+        "ondo"
+      ],
+      [
+        "gerge",
+        "itu"
+      ],
+      [
+        "Ġkirer",
+        "it"
+      ],
+      [
+        "ĠKingo",
+        "yai"
+      ],
+      [
+        "ale",
+        "m"
+      ],
+      [
+        "wer",
+        "ichi"
+      ],
+      [
+        "yum",
+        "ji"
+      ],
+      [
+        "Ġony",
+        "i"
+      ],
+      [
+        "Ġkech",
+        "e"
+      ],
+      [
+        "Ġkis",
+        "ob"
+      ],
+      [
+        "ĠKito",
+        "i"
+      ],
+      [
+        "Ġchem",
+        "ng"
+      ],
+      [
+        "Ġkaag",
+        "imit"
+      ],
+      [
+        "ĠKimok",
+        "omi"
+      ],
+      [
+        "ĠYa",
+        "udik"
+      ],
+      [
+        "ĠAsur",
+        "ia"
+      ],
+      [
+        "Ġbetusiech",
+        "oto"
+      ],
+      [
+        "Ġcheptug",
+        "onoto"
+      ],
+      [
+        "Ġmuguleld",
+        "anyi"
+      ],
+      [
+        "Ob",
+        "wan"
+      ],
+      [
+        "aam",
+        "a"
+      ],
+      [
+        "Ġkoom",
+        "ben"
+      ],
+      [
+        "Ġkoyo",
+        "goito"
+      ],
+      [
+        "Ġkoweekyi",
+        "gei"
+      ],
+      [
+        "ĠJok",
+        "tan"
+      ],
+      [
+        "Ġkapt",
+        "is"
+      ],
+      [
+        "Ġkarwat",
+        "itet"
+      ],
+      [
+        "imegit",
+        "u"
+      ],
+      [
+        "Ġkosopch",
+        "o"
+      ],
+      [
+        "Ġkikigu",
+        "ren"
+      ],
+      [
+        "ĠPila",
+        "to"
+      ],
+      [
+        "ĠJEIS",
+        "O"
+      ],
+      [
+        "ĠJEHO",
+        "VAH"
+      ],
+      [
+        "!",
+        "'"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "A",
+        "N"
+      ],
+      [
+        "A",
+        "m"
+      ],
+      [
+        "A",
+        "ng"
+      ],
+      [
+        "E",
+        "I"
+      ],
+      [
+        "E",
+        "K"
+      ],
+      [
+        "I",
+        "N"
+      ],
+      [
+        "K",
+        "O"
+      ],
+      [
+        "K",
+        "i"
+      ],
+      [
+        "M",
+        "a"
+      ],
+      [
+        "M",
+        "i"
+      ],
+      [
+        "M",
+        "UK"
+      ],
+      [
+        "N",
+        "g"
+      ],
+      [
+        "T",
+        "AI"
+      ],
+      [
+        "U",
+        "L"
+      ],
+      [
+        "U",
+        "T"
+      ],
+      [
+        "U",
+        "U"
+      ],
+      [
+        "W",
+        "EK"
+      ],
+      [
+        "a",
+        "d"
+      ],
+      [
+        "a",
+        "it"
+      ],
+      [
+        "b",
+        "u"
+      ],
+      [
+        "b",
+        "ut"
+      ],
+      [
+        "b",
+        "ak"
+      ],
+      [
+        "d",
+        "oi"
+      ],
+      [
+        "d",
+        "utik"
+      ],
+      [
+        "e",
+        "u"
+      ],
+      [
+        "e",
+        "do"
+      ],
+      [
+        "g",
+        "ong"
+      ],
+      [
+        "h",
+        "le"
+      ],
+      [
+        "h",
+        "em"
+      ],
+      [
+        "h",
+        "eba"
+      ],
+      [
+        "i",
+        "ik"
+      ],
+      [
+        "i",
+        "and"
+      ],
+      [
+        "i",
+        "choto"
+      ],
+      [
+        "i",
+        "ger"
+      ],
+      [
+        "i",
+        "get"
+      ],
+      [
+        "i",
+        "boi"
+      ],
+      [
+        "i",
+        "anik"
+      ],
+      [
+        "j",
+        "ael"
+      ],
+      [
+        "l",
+        "i"
+      ],
+      [
+        "l",
+        "u"
+      ],
+      [
+        "l",
+        "ing"
+      ],
+      [
+        "l",
+        "og"
+      ],
+      [
+        "o",
+        "d"
+      ],
+      [
+        "o",
+        "it"
+      ],
+      [
+        "o",
+        "si"
+      ],
+      [
+        "o",
+        "indet"
+      ],
+      [
+        "o",
+        "yesyo"
+      ],
+      [
+        "p",
+        "a"
+      ],
+      [
+        "p",
+        "chi"
+      ],
+      [
+        "r",
+        "ot"
+      ],
+      [
+        "r",
+        "ib"
+      ],
+      [
+        "r",
+        "iny"
+      ],
+      [
+        "r",
+        "isto"
+      ],
+      [
+        "r",
+        "aim"
+      ],
+      [
+        "s",
+        "o"
+      ],
+      [
+        "s",
+        "at"
+      ],
+      [
+        "s",
+        "oi"
+      ],
+      [
+        "t",
+        "en"
+      ],
+      [
+        "t",
+        "ik"
+      ],
+      [
+        "t",
+        "any"
+      ],
+      [
+        "t",
+        "uget"
+      ],
+      [
+        "t",
+        "ianik"
+      ],
+      [
+        "w",
+        "en"
+      ],
+      [
+        "w",
+        "ei"
+      ],
+      [
+        "w",
+        "eret"
+      ],
+      [
+        "y",
+        "or"
+      ],
+      [
+        "y",
+        "wet"
+      ],
+      [
+        "y",
+        "os"
+      ],
+      [
+        "y",
+        "and"
+      ],
+      [
+        "y",
+        "andan"
+      ],
+      [
+        "y",
+        "wei"
+      ],
+      [
+        "Ġ",
+        "'"
+      ],
+      [
+        "Ġ",
+        "6"
+      ],
+      [
+        "Ġ",
+        "9"
+      ],
+      [
+        "Ġ",
+        "F"
+      ],
+      [
+        "Ġ",
+        "p"
+      ],
+      [
+        "Ġ",
+        "on"
+      ],
+      [
+        "Ġ",
+        "ur"
+      ],
+      [
+        "Ġ",
+        "yo"
+      ],
+      [
+        "Ġ",
+        "yet"
+      ],
+      [
+        "Ġ",
+        "CH"
+      ],
+      [
+        "Ġa",
+        "in"
+      ],
+      [
+        "Ġa",
+        "la"
+      ],
+      [
+        "Ġa",
+        "wong"
+      ],
+      [
+        "Ġa",
+        "yachini"
+      ],
+      [
+        "Ġko",
+        "en"
+      ],
+      [
+        "Ġko",
+        "ot"
+      ],
+      [
+        "Ġko",
+        "go"
+      ],
+      [
+        "Ġko",
+        "wet"
+      ],
+      [
+        "Ġko",
+        "ung"
+      ],
+      [
+        "Ġko",
+        "ga"
+      ],
+      [
+        "Ġko",
+        "wech"
+      ],
+      [
+        "Ġko",
+        "goito"
+      ],
+      [
+        "Ġko",
+        "pchei"
+      ],
+      [
+        "Ġko",
+        "gan"
+      ],
+      [
+        "et",
+        "er"
+      ],
+      [
+        "ch",
+        "a"
+      ],
+      [
+        "ch",
+        "ut"
+      ],
+      [
+        "ch",
+        "indoi"
+      ],
+      [
+        "in",
+        "i"
+      ],
+      [
+        "in",
+        "am"
+      ],
+      [
+        "in",
+        "go"
+      ],
+      [
+        "in",
+        "oton"
+      ],
+      [
+        "in",
+        "ebe"
+      ],
+      [
+        "Ġn",
+        "ge"
+      ],
+      [
+        "Ġn",
+        "yam"
+      ],
+      [
+        "Ġak",
+        "wa"
+      ],
+      [
+        "Ġki",
+        "am"
+      ],
+      [
+        "Ġki",
+        "ta"
+      ],
+      [
+        "Ġki",
+        "si"
+      ],
+      [
+        "Ġki",
+        "wong"
+      ],
+      [
+        "Ġki",
+        "yesyo"
+      ],
+      [
+        "Ġki",
+        "weeigei"
+      ],
+      [
+        "on",
+        "o"
+      ],
+      [
+        "ĠK",
+        "et"
+      ],
+      [
+        "ĠK",
+        "ot"
+      ],
+      [
+        "ĠK",
+        "er"
+      ],
+      [
+        "ĠK",
+        "or"
+      ],
+      [
+        "ĠK",
+        "eny"
+      ],
+      [
+        "ĠK",
+        "iny"
+      ],
+      [
+        "ĠK",
+        "ote"
+      ],
+      [
+        "ĠK",
+        "OR"
+      ],
+      [
+        "Ġt",
+        "e"
+      ],
+      [
+        "Ġt",
+        "am"
+      ],
+      [
+        "Ġt",
+        "em"
+      ],
+      [
+        "Ġt",
+        "any"
+      ],
+      [
+        "Ġt",
+        "onon"
+      ],
+      [
+        "Ġb",
+        "ikab"
+      ],
+      [
+        "Ġb",
+        "uny"
+      ],
+      [
+        "Ġb",
+        "ag"
+      ],
+      [
+        "Ġb",
+        "endi"
+      ],
+      [
+        "Ġb",
+        "atai"
+      ],
+      [
+        "Ġb",
+        "edo"
+      ],
+      [
+        "ek",
+        "it"
+      ],
+      [
+        "it",
+        "i"
+      ],
+      [
+        "it",
+        "ik"
+      ],
+      [
+        "it",
+        "or"
+      ],
+      [
+        "it",
+        "wat"
+      ],
+      [
+        "it",
+        "ori"
+      ],
+      [
+        "Ġne",
+        "e"
+      ],
+      [
+        "Ġch",
+        "om"
+      ],
+      [
+        "Ġch",
+        "uto"
+      ],
+      [
+        "an",
+        "e"
+      ],
+      [
+        "an",
+        "yo"
+      ],
+      [
+        "an",
+        "ach"
+      ],
+      [
+        "ik",
+        "el"
+      ],
+      [
+        "am",
+        "e"
+      ],
+      [
+        "am",
+        "wa"
+      ],
+      [
+        "am",
+        "iten"
+      ],
+      [
+        "ĠA",
+        "B"
+      ],
+      [
+        "ĠA",
+        "R"
+      ],
+      [
+        "ĠA",
+        "ge"
+      ],
+      [
+        "is",
+        "on"
+      ],
+      [
+        "is",
+        "it"
+      ],
+      [
+        "is",
+        "er"
+      ],
+      [
+        "is",
+        "raim"
+      ],
+      [
+        "Ġm",
+        "ab"
+      ],
+      [
+        "Ġm",
+        "ong"
+      ],
+      [
+        "Ġm",
+        "es"
+      ],
+      [
+        "Ġm",
+        "omi"
+      ],
+      [
+        "Ġm",
+        "uget"
+      ],
+      [
+        "Ġm",
+        "itei"
+      ],
+      [
+        "ot",
+        "indo"
+      ],
+      [
+        "ot",
+        "wetab"
+      ],
+      [
+        "un",
+        "ot"
+      ],
+      [
+        "un",
+        "gu"
+      ],
+      [
+        "un",
+        "nyi"
+      ],
+      [
+        "ab",
+        "ut"
+      ],
+      [
+        "ab",
+        "el"
+      ],
+      [
+        "ab",
+        "ib"
+      ],
+      [
+        "ab",
+        "ila"
+      ],
+      [
+        "ĠJ",
+        "aban"
+      ],
+      [
+        "gu",
+        "siek"
+      ],
+      [
+        "Ġche",
+        "p"
+      ],
+      [
+        "ar",
+        "ah"
+      ],
+      [
+        "ar",
+        "iand"
+      ],
+      [
+        "ĠJe",
+        "rus"
+      ],
+      [
+        "go",
+        "sta"
+      ],
+      [
+        "Ġbo",
+        "iboi"
+      ],
+      [
+        "ind",
+        "e"
+      ],
+      [
+        "ind",
+        "ennyi"
+      ],
+      [
+        "ind",
+        "anywa"
+      ],
+      [
+        "er",
+        "ek"
+      ],
+      [
+        "Ġng",
+        "etab"
+      ],
+      [
+        "ĠKi",
+        "on"
+      ],
+      [
+        "ĠKi",
+        "yo"
+      ],
+      [
+        "ĠKi",
+        "wek"
+      ],
+      [
+        "ĠKi",
+        "gol"
+      ],
+      [
+        "ĠKi",
+        "geer"
+      ],
+      [
+        "ĠKi",
+        "chamwech"
+      ],
+      [
+        "Ġi",
+        "gor"
+      ],
+      [
+        "Ġi",
+        "pchei"
+      ],
+      [
+        "Ġi",
+        "guoten"
+      ],
+      [
+        "Ġi",
+        "rib"
+      ],
+      [
+        "wa",
+        "un"
+      ],
+      [
+        "ya",
+        "togis"
+      ],
+      [
+        "or",
+        "ik"
+      ],
+      [
+        "or",
+        "chi"
+      ],
+      [
+        "or",
+        "oron"
+      ],
+      [
+        "Ġs",
+        "ang"
+      ],
+      [
+        "Ġs",
+        "um"
+      ],
+      [
+        "Ġs",
+        "isit"
+      ],
+      [
+        "Ġs",
+        "abib"
+      ],
+      [
+        "Ġka",
+        "a"
+      ],
+      [
+        "Ġka",
+        "l"
+      ],
+      [
+        "Ġka",
+        "to"
+      ],
+      [
+        "Ġka",
+        "ung"
+      ],
+      [
+        "Ġka",
+        "otik"
+      ],
+      [
+        "Ġka",
+        "yam"
+      ],
+      [
+        "ok",
+        "ab"
+      ],
+      [
+        "Ġin",
+        "yal"
+      ],
+      [
+        "Ġin",
+        "jirenik"
+      ],
+      [
+        "la",
+        "pkeit"
+      ],
+      [
+        "ĠN",
+        "im"
+      ],
+      [
+        "ĠN",
+        "gech"
+      ],
+      [
+        "ĠN",
+        "inebe"
+      ],
+      [
+        "eny",
+        "o"
+      ],
+      [
+        "ob",
+        "en"
+      ],
+      [
+        "ob",
+        "et"
+      ],
+      [
+        "ye",
+        "li"
+      ],
+      [
+        "oto",
+        "mo"
+      ],
+      [
+        "il",
+        "and"
+      ],
+      [
+        "Ġkom",
+        "et"
+      ],
+      [
+        "Ġkom",
+        "ong"
+      ],
+      [
+        "Ġkom",
+        "osi"
+      ],
+      [
+        "ĠT",
+        "ar"
+      ],
+      [
+        "at",
+        "indet"
+      ],
+      [
+        "at",
+        "etab"
+      ],
+      [
+        "at",
+        "ennyi"
+      ],
+      [
+        "at",
+        "utik"
+      ],
+      [
+        "om",
+        "iten"
+      ],
+      [
+        "om",
+        "natet"
+      ],
+      [
+        "om",
+        "iti"
+      ],
+      [
+        "Ġkw",
+        "ariand"
+      ],
+      [
+        "ur",
+        "e"
+      ],
+      [
+        "ĠM",
+        "es"
+      ],
+      [
+        "ĠM",
+        "and"
+      ],
+      [
+        "ĠM",
+        "elit"
+      ],
+      [
+        "ĠM",
+        "ata"
+      ],
+      [
+        "ĠM",
+        "wae"
+      ],
+      [
+        "ĠM",
+        "eu"
+      ],
+      [
+        "ĠM",
+        "israim"
+      ],
+      [
+        "ond",
+        "et"
+      ],
+      [
+        "ond",
+        "it"
+      ],
+      [
+        "ond",
+        "uni"
+      ],
+      [
+        "em",
+        "ak"
+      ],
+      [
+        "em",
+        "ber"
+      ],
+      [
+        "Ġkim",
+        "aran"
+      ],
+      [
+        "Ġkim",
+        "anda"
+      ],
+      [
+        "Ġkim",
+        "anach"
+      ],
+      [
+        "Ġkob",
+        "a"
+      ],
+      [
+        "Ġkob",
+        "ek"
+      ],
+      [
+        "Ġkob",
+        "it"
+      ],
+      [
+        "Ġkob",
+        "is"
+      ],
+      [
+        "Ġkob",
+        "un"
+      ],
+      [
+        "Ġkob",
+        "ar"
+      ],
+      [
+        "Ġkob",
+        "ir"
+      ],
+      [
+        "Ġkob",
+        "ityo"
+      ],
+      [
+        "Ġkob",
+        "erur"
+      ],
+      [
+        "Ġkob",
+        "ara"
+      ],
+      [
+        "Ġkob",
+        "usyi"
+      ],
+      [
+        "ĠE",
+        "up"
+      ],
+      [
+        "Ġkot",
+        "ab"
+      ],
+      [
+        "os",
+        "to"
+      ],
+      [
+        "wo",
+        "e"
+      ],
+      [
+        "wo",
+        "lji"
+      ],
+      [
+        "Ġab",
+        "ar"
+      ],
+      [
+        "Ġab",
+        "wat"
+      ],
+      [
+        "Ġti",
+        "e"
+      ],
+      [
+        "Ġti",
+        "pt"
+      ],
+      [
+        "ung",
+        "weret"
+      ],
+      [
+        "Ġkin",
+        "am"
+      ],
+      [
+        "Ġkin",
+        "ap"
+      ],
+      [
+        "Ġkin",
+        "erech"
+      ],
+      [
+        "Ġam",
+        "e"
+      ],
+      [
+        "Ġam",
+        "age"
+      ],
+      [
+        "Ġo",
+        "inet"
+      ],
+      [
+        "Ġo",
+        "gergeitu"
+      ],
+      [
+        "Ġket",
+        "eb"
+      ],
+      [
+        "Ġket",
+        "oton"
+      ],
+      [
+        "ak",
+        "toi"
+      ],
+      [
+        "ĠB",
+        "ik"
+      ],
+      [
+        "ĠB",
+        "oun"
+      ],
+      [
+        "ĠB",
+        "iik"
+      ],
+      [
+        "ĠS",
+        "ab"
+      ],
+      [
+        "ĠS",
+        "im"
+      ],
+      [
+        "ĠS",
+        "eret"
+      ],
+      [
+        "ĠS",
+        "ela"
+      ],
+      [
+        "ĠS",
+        "id"
+      ],
+      [
+        "ĠS",
+        "OB"
+      ],
+      [
+        "ĠS",
+        "heba"
+      ],
+      [
+        "ĠS",
+        "iget"
+      ],
+      [
+        "ĠS",
+        "arah"
+      ],
+      [
+        "Ġye",
+        "ito"
+      ],
+      [
+        "Ġye",
+        "chen"
+      ],
+      [
+        "Ġye",
+        "ma"
+      ],
+      [
+        "Ġwer",
+        "itab"
+      ],
+      [
+        "Ġkip",
+        "t"
+      ],
+      [
+        "Ġkip",
+        "tayat"
+      ],
+      [
+        "Ġkip",
+        "log"
+      ],
+      [
+        "es",
+        "yo"
+      ],
+      [
+        "es",
+        "tai"
+      ],
+      [
+        "isiek",
+        "ab"
+      ],
+      [
+        "as",
+        "a"
+      ],
+      [
+        "ib",
+        "ar"
+      ],
+      [
+        "ib",
+        "ai"
+      ],
+      [
+        "Ġag",
+        "inye"
+      ],
+      [
+        "Ġag",
+        "ich"
+      ],
+      [
+        "Ġsob",
+        "e"
+      ]
+    ]
+  }
+}
