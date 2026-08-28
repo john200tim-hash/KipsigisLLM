@@ -19,8 +19,9 @@ def main():
     with open("configs/train_config.yaml", "r") as f:
         config = yaml.safe_load(f)
 
-    # 1. Dynamically merge all .txt files from data/raw/ into corpus.txt
-    merge_raw_data(raw_dir="data/raw", output_file="data/processed/corpus.txt")
+    # 1. Dynamically merge all .txt files from all data source folders into corpus.txt
+    print("-> Scanning data sources and building corpus...")
+    merge_raw_data(output_file="data/processed/corpus.txt")
     
     # 2. Retrain Tokenizer dynamically on the new corpus
     train_tokenizer("data/processed/corpus.txt", "tokenizer/kipsigis_tokenizer.json", vocab_size=config['vocab_size'])
