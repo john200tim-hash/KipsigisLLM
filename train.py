@@ -1,8 +1,11 @@
 import yaml
 import torch
 import hashlib
+import os
 from src.model import TinyCustomLLM
 from src.dataset import get_dataloader
+from src.data_prep import merge_raw_data
+from src.tokenizer_train import train_tokenizer
 
 def get_checkpoint_sha(filepath):
     sha256_hash = hashlib.sha256()
@@ -15,6 +18,12 @@ def main():
     print("-> Loading Config...")
     with open("configs/train_config.yaml", "r") as f:
         config = yaml.safe_load(f)
+
+    # 1. Dynamically merge all .txt files from data/raw/ into corpus.txt
+    merge_raw_data(raw_dir="data/raw", output_file="data/processed/corpus.txt")
+    
+    # 2. Retrain Tokenizer dynamically on the new corpus
+    train_tokenizer("data/processed/corpus.txt", "tokenizer/kipsigis_tokenizer.json", vocab_size=config['vocab_size'])
 
     print("-> Initializing Model & Data Loader...")
     model = TinyCustomLLM(config)

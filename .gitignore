@@ -9,3 +9,7 @@ data/processed/*
 data/datasets/*
 Datasets/
 corpus.txt
+
+# Ignore large binary weights and tokenizers (Upload these to GitHub Releases instead)
+checkpoints/*.pt
+tokenizer/*.json
