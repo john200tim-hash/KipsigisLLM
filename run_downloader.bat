@@ -16,8 +16,9 @@ echo [INFO] Updating dependencies...
 pip install -r requirements.txt
 
 echo.
-echo [INFO] Please make sure your Hugging Face token is set.
-echo You can set it temporarily in this window using: set HF_TOKEN=your_token
+IF "%HF_TOKEN%"=="" (
+    set /p HF_TOKEN="Enter your Hugging Face Token (starts with hf_): "
+)
 echo.
 
 python src/download_asr.py
