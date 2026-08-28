@@ -1,7 +1,5 @@
 torch>=2.0.0
-torchaudio
 tokenizers
 pyyaml
-datasets
-soundfile
+requests
 python-dotenv
