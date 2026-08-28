@@ -5,7 +5,7 @@ from tokenizers import Tokenizer
 from tokenizers.decoders import ByteLevel
 from src.model import TinyCustomLLM
 
-def run_test_generation(model, tokenizer, config, prompt="Eng", max_new_tokens=40, temperature=0.8, top_k=40):
+def run_test_generation(model, tokenizer, config, prompt="Eng", max_new_tokens=40, temperature=0.8, top_k=40, repetition_penalty=1.2):
     model.eval()
     encoded = tokenizer.encode(prompt)
     input_ids = torch.tensor([encoded.ids], dtype=torch.long)
@@ -19,16 +19,26 @@ def run_test_generation(model, tokenizer, config, prompt="Eng", max_new_tokens=4
             context = input_ids[:, -config['block_size']:]
             logits, _ = model(context)
             
-            # Get logits for the last token and apply temperature
-            logits = logits[:, -1, :] / temperature
+            # Get logits for the last token
+            next_token_logits = logits[:, -1, :]
+            
+            # Apply repetition penalty
+            for token in set(generated):
+                if next_token_logits[0, token] < 0:
+                    next_token_logits[0, token] *= repetition_penalty
+                else:
+                    next_token_logits[0, token] /= repetition_penalty
+
+            # Apply temperature
+            next_token_logits = next_token_logits / temperature
             
             # Top-K filtering
             if top_k is not None:
-                v, _ = torch.topk(logits, min(top_k, logits.size(-1)))
-                logits[logits < v[:, [-1]]] = -float('Inf')
+                v, _ = torch.topk(next_token_logits, min(top_k, next_token_logits.size(-1)))
+                next_token_logits[next_token_logits < v[:, [-1]]] = -float('Inf')
                 
             # Sample from the filtered distribution
-            probs = F.softmax(logits, dim=-1)
+            probs = F.softmax(next_token_logits, dim=-1)
             next_token = torch.multinomial(probs, num_samples=1).item()
             
             generated.append(next_token)

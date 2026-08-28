@@ -36,30 +36,24 @@ def main():
         batch_size=config['batch_size']
     )
 
-    print(f"\n-> Starting Training Loop ({config['epochs']} Epochs / Steps)...")
+    print(f"\n-> Starting Training Loop ({config['epochs']} Epochs)...")
     model.train()
     
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model.to(device)
 
-    # Simplified training loop mimicking the original steps
-    data_iter = iter(dataloader)
-    for step in range(config['epochs']):
-        try:
-            xb, yb = next(data_iter)
-        except StopIteration:
-            data_iter = iter(dataloader)
-            xb, yb = next(data_iter)
-            
-        xb, yb = xb.to(device), yb.to(device)
+    total_steps = 0
+    for epoch in range(config['epochs']):
+        for step, (xb, yb) in enumerate(dataloader):
+            xb, yb = xb.to(device), yb.to(device)
 
-        optimizer.zero_grad(set_to_none=True)
-        logits, loss = model(xb, yb)
-        loss.backward()
-        optimizer.step()
+            optimizer.zero_grad(set_to_none=True)
+            logits, loss = model(xb, yb)
+            loss.backward()
+            optimizer.step()
+            total_steps += 1
 
-        if (step + 1) % 10 == 0 or step == 0:
-            print(f"Step {step+1:02d} | Loss: {loss.item():.4f}")
+        print(f"Epoch {epoch+1}/{config['epochs']} | Final Loss: {loss.item():.4f}")
 
     ckpt_path = "checkpoints/kipsigis_model.pt"
     torch.save(model.state_dict(), ckpt_path)
