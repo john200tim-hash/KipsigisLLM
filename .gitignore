@@ -9,6 +9,7 @@ data/processed/*
 data/datasets/*
 Datasets/
 corpus.txt
+data/all_transcripts_merged.txt
 
 # Ignore large binary weights and tokenizers (Upload these to GitHub Releases instead)
 checkpoints/*.pt
@@ -18,3 +19,7 @@ tokenizer/*.json
 .env
 src/download_asr.py
 run_downloader.bat
+
+# Ignore download states and logs
+download_state.json
+data/download_state.json
