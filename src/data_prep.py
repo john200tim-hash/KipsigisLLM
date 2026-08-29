@@ -1,90 +1,151 @@
 import os
 import glob
 import json
-import hashlib
+import random
 
 CACHE_FILE = "data/processed/corpus_meta.json"
 
-def _get_source_fingerprint(text_sources):
-    """Create a fingerprint of all source files based on count + total size + newest mtime."""
+def _get_source_fingerprint(grammar_dir, merged_transcript, grammar_repeat):
+    """Create a fingerprint based on source file count, total size, newest mtime, and grammar_repeat."""
     total_files = 0
     total_size = 0
     newest_mtime = 0.0
 
-    for source_dir in text_sources:
-        if os.path.isdir(source_dir):
-            files = glob.glob(os.path.join(source_dir, "*.txt"))
-            total_files += len(files)
-            for f in files:
-                stat = os.stat(f)
-                total_size += stat.st_size
-                if stat.st_mtime > newest_mtime:
-                    newest_mtime = stat.st_mtime
+    # Check grammar dir
+    if os.path.isdir(grammar_dir):
+        files = glob.glob(os.path.join(grammar_dir, "*.txt"))
+        total_files += len(files)
+        for f in files:
+            stat = os.stat(f)
+            total_size += stat.st_size
+            if stat.st_mtime > newest_mtime:
+                newest_mtime = stat.st_mtime
+                
+    # Check merged transcript file
+    if os.path.exists(merged_transcript):
+        total_files += 1
+        stat = os.stat(merged_transcript)
+        total_size += stat.st_size
+        if stat.st_mtime > newest_mtime:
+            newest_mtime = stat.st_mtime
 
-    return {"files": total_files, "size": total_size, "mtime": round(newest_mtime, 2)}
+    return {
+        "files": total_files,
+        "size": total_size,
+        "mtime": round(newest_mtime, 2),
+        "grammar_repeat": grammar_repeat,
+    }
 
 
-def merge_raw_data(output_file="data/processed/corpus.txt"):
+def _read_file(path):
+    """Read a file, returning stripped text or empty string."""
+    try:
+        with open(path, "r", encoding="utf-8", errors="ignore") as f:
+            return f.read().strip()
+    except Exception:
+        return ""
+
+
+def _consolidate_from_merged_transcript(merged_file, sentences_per_chunk=10):
     """
-    Merges text from ALL known text data sources into a single corpus file.
-    Skips re-merging if nothing has changed since last build.
-
-    Current text sources (grammar-first approach):
-      - data/raw/           : Hand-curated Kipsigis grammar .txt files
-      - data/transcripts/   : Transcription .txt files downloaded from HF ASR dataset
-
-    Future sources (add here when ready):
-      # - data/audio_transcripts/ : Transcripts paired with audio
+    Reads the single merged transcript file (one sentence per line),
+    and groups them into paragraph chunks.
     """
+    if not os.path.exists(merged_file):
+        return []
+        
+    with open(merged_file, "r", encoding="utf-8", errors="ignore") as f:
+        sentences = [line.strip() for line in f if line.strip()]
+        
+    if not sentences:
+        return []
 
-    # --- TEXT DATA SOURCES ---
-    text_sources = [
-        "data/raw",
-        "data/transcripts",
-        # "data/audio_transcripts",  # Uncomment when audio phase begins
-    ]
-    # --------------------------
+    # Shuffle so grouped chunks aren't all from the same recording session sequentially
+    random.shuffle(sentences)
 
-    fingerprint = _get_source_fingerprint(text_sources)
+    chunks = []
+    for i in range(0, len(sentences), sentences_per_chunk):
+        chunk = "\n".join(sentences[i : i + sentences_per_chunk])
+        if chunk.strip():
+            chunks.append(chunk)
 
-    # Check if corpus is already up to date
+    return chunks
+
+
+def merge_raw_data(output_file="data/processed/corpus.txt", grammar_repeat=5):
+    """
+    Merges text from ALL known text sources into a single grammar-boosted corpus.
+
+    Grammar-first strategy:
+      - data/raw/       : Curated Kipsigis text (grammar, prose). Repeated
+                          `grammar_repeat` times.
+      - data/all_transcripts_merged.txt: ASR transcription file (one sentence per line).
+                          Consolidated into 10-sentence paragraph chunks before
+                          merging, giving the model sentence-to-sentence context.
+    """
+    GRAMMAR_DIR = "data/raw"
+    MERGED_TRANSCRIPT = "data/all_transcripts_merged.txt"
+    SENTENCES_PER_CHUNK = 10
+
+    fingerprint = _get_source_fingerprint(GRAMMAR_DIR, MERGED_TRANSCRIPT, grammar_repeat)
+
+    # ── Cache check: skip rebuild if nothing changed ──────────────────────────
     if os.path.exists(output_file) and os.path.exists(CACHE_FILE):
         with open(CACHE_FILE, "r") as f:
             cached = json.load(f)
         if cached == fingerprint:
-            print(f"  -> Corpus is up to date ({fingerprint['files']:,} source files). Skipping re-merge.")
+            print(
+                f"  -> Corpus is up to date "
+                f"({fingerprint['files']:,} source files, "
+                f"grammar_repeat={grammar_repeat}). Skipping re-merge."
+            )
             return True
 
-    # Something changed — rebuild corpus
-    all_text_files = []
-    for source_dir in text_sources:
-        if os.path.isdir(source_dir):
-            found = glob.glob(os.path.join(source_dir, "*.txt"))
-            if found:
-                print(f"  -> Found {len(found):,} .txt files in '{source_dir}'")
-                all_text_files.extend(found)
-            else:
-                print(f"  -> [Notice] No .txt files in '{source_dir}' (skipping)")
-        else:
-            print(f"  -> [Notice] Folder '{source_dir}' does not exist yet (skipping)")
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    paragraphs = []  # list of text blocks to write
 
-    if not all_text_files:
-        print("Warning: No .txt files found in any data source folder!")
+    # ── 1. Grammar files (repeated grammar_repeat times) ─────────────────────
+    grammar_files = glob.glob(os.path.join(GRAMMAR_DIR, "*.txt")) if os.path.isdir(GRAMMAR_DIR) else []
+    if grammar_files:
+        print(
+            f"  -> Found {len(grammar_files)} grammar file(s) in '{GRAMMAR_DIR}' "
+            f"(repeating {grammar_repeat}x for grammar emphasis)"
+        )
+        for _ in range(grammar_repeat):
+            for gf in grammar_files:
+                text = _read_file(gf)
+                if text:
+                    paragraphs.append(text)
+    else:
+        print(f"  -> [Notice] No grammar files in '{GRAMMAR_DIR}' yet — add .txt files here!")
+
+    # ── 2. Transcript files (consolidated into paragraph chunks) ──────────────
+    chunks = _consolidate_from_merged_transcript(MERGED_TRANSCRIPT, SENTENCES_PER_CHUNK)
+    if chunks:
+        print(
+            f"  -> Consolidated sentences from '{MERGED_TRANSCRIPT}' into {len(chunks):,} paragraph chunks "
+            f"({SENTENCES_PER_CHUNK} sentences each)"
+        )
+        paragraphs.extend(chunks)
+    else:
+        print(f"  -> [Notice] No transcripts found in '{MERGED_TRANSCRIPT}'")
+
+    if not paragraphs:
+        print("Warning: No text found in any data source folder!")
         return False
 
-    print(f"  -> Merging {len(all_text_files):,} total files into {output_file}...")
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    # ── 3. Shuffle all paragraphs so grammar and transcripts interleave ───────
+    random.shuffle(paragraphs)
 
+    print(f"  -> Writing {len(paragraphs):,} paragraphs to {output_file}...")
     with open(output_file, "w", encoding="utf-8") as out_f:
-        for file_path in all_text_files:
-            with open(file_path, "r", encoding="utf-8", errors="ignore") as in_f:
-                content = in_f.read().strip()
-                if content:
-                    out_f.write(content + "\n\n")
+        for para in paragraphs:
+            out_f.write(para.strip() + "\n\n")
 
-    # Save fingerprint so next run skips this step
+    # Save fingerprint
     with open(CACHE_FILE, "w") as f:
         json.dump(fingerprint, f)
 
-    print(f"  -> Corpus built successfully.")
+    corpus_size_kb = os.path.getsize(output_file) / 1024
+    print(f"  -> Corpus built: {corpus_size_kb:.1f} KB  ({len(paragraphs):,} paragraphs)")
     return True

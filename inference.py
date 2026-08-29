@@ -5,7 +5,7 @@ from tokenizers import Tokenizer
 from tokenizers.decoders import ByteLevel
 from src.model import TinyCustomLLM
 
-def run_test_generation(model, tokenizer, config, prompt="Eng", max_new_tokens=40, temperature=0.8, top_k=40, repetition_penalty=1.2):
+def run_test_generation(model, tokenizer, config, prompt="Eng", max_new_tokens=40, temperature=1.5, top_k=40, repetition_penalty=1.2):
     model.eval()
     encoded = tokenizer.encode(prompt)
     input_ids = torch.tensor([encoded.ids], dtype=torch.long)
@@ -59,7 +59,7 @@ def main():
     model = TinyCustomLLM(config)
 
     print("-> Loading trained weights from checkpoints/kipsigis_model.pt...")
-    model.load_state_dict(torch.load("checkpoints/kipsigis_model.pt"))
+    model.load_state_dict(torch.load("checkpoints/kipsigis_model.pt", map_location=torch.device('cpu')))
     model.eval()
 
     prompts = ["Kamuktaindet", "Eng taunet", "Noa"]
