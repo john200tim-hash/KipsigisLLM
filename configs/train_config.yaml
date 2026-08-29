@@ -1,14 +1,29 @@
-batch_size: 32
-block_size: 512
-data_path: /content/all_transcripts_merged.txt
-device: cuda
-dropout: 0.1
-epochs: 15
+# ==============================================================================
+# KipsigisLLM Training & Model Configuration
+# ==============================================================================
+
+# Data Paths
+raw_data_dir: "data/raw"
+processed_corpus_path: "data/processed/corpus.txt"
+merged_transcript_path: "data/all_transcripts_merged.txt"
+tokenizer_path: "tokenizer/kipsigis_tokenizer.json"
+checkpoint_path: "checkpoints/kipsigis_model.pt"
+
+# Data Processing Hyperparameters
 grammar_repeat: 8
+val_split: 0.1
+
+# Model Architecture Hyperparameters
+vocab_size: 6000
+block_size: 256
+n_embd: 384
+n_head: 6
+n_layer: 6
+dropout: 0.1
+
+# Training Hyperparameters
+batch_size: 32
+epochs: 15
 learning_rate: 0.0004
 max_steps: null
-n_embd: 512
-n_head: 8
-n_layer: 8
-val_split: 0.1
-vocab_size: 6000
+device: "auto"  # "auto", "cuda", or "cpu"

@@ -72,43 +72,44 @@ def _consolidate_from_merged_transcript(merged_file, sentences_per_chunk=10):
     return chunks
 
 
-def merge_raw_data(output_file="data/processed/corpus.txt", grammar_repeat=5):
+def merge_raw_data(grammar_dir="data/raw", merged_transcript="data/all_transcripts_merged.txt", output_file="data/processed/corpus.txt", grammar_repeat=5):
     """
     Merges text from ALL known text sources into a single grammar-boosted corpus.
 
     Grammar-first strategy:
-      - data/raw/       : Curated Kipsigis text (grammar, prose). Repeated
-                          `grammar_repeat` times.
-      - data/all_transcripts_merged.txt: ASR transcription file (one sentence per line).
-                          Consolidated into 10-sentence paragraph chunks before
-                          merging, giving the model sentence-to-sentence context.
+      - grammar_dir    : Curated Kipsigis text (grammar, prose). Repeated
+                         `grammar_repeat` times.
+      - merged_transcript: ASR transcription file (one sentence per line).
+                         Consolidated into 10-sentence paragraph chunks before
+                         merging, giving the model sentence-to-sentence context.
     """
-    GRAMMAR_DIR = "data/raw"
-    MERGED_TRANSCRIPT = "data/all_transcripts_merged.txt"
     SENTENCES_PER_CHUNK = 10
 
-    fingerprint = _get_source_fingerprint(GRAMMAR_DIR, MERGED_TRANSCRIPT, grammar_repeat)
+    fingerprint = _get_source_fingerprint(grammar_dir, merged_transcript, grammar_repeat)
 
     # ── Cache check: skip rebuild if nothing changed ──────────────────────────
     if os.path.exists(output_file) and os.path.exists(CACHE_FILE):
-        with open(CACHE_FILE, "r") as f:
-            cached = json.load(f)
-        if cached == fingerprint:
-            print(
-                f"  -> Corpus is up to date "
-                f"({fingerprint['files']:,} source files, "
-                f"grammar_repeat={grammar_repeat}). Skipping re-merge."
-            )
-            return True
+        try:
+            with open(CACHE_FILE, "r") as f:
+                cached = json.load(f)
+            if cached == fingerprint:
+                print(
+                    f"  -> Corpus is up to date "
+                    f"({fingerprint['files']:,} source files, "
+                    f"grammar_repeat={grammar_repeat}). Skipping re-merge."
+                )
+                return True
+        except Exception:
+            pass
 
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     paragraphs = []  # list of text blocks to write
 
     # ── 1. Grammar files (repeated grammar_repeat times) ─────────────────────
-    grammar_files = glob.glob(os.path.join(GRAMMAR_DIR, "*.txt")) if os.path.isdir(GRAMMAR_DIR) else []
+    grammar_files = glob.glob(os.path.join(grammar_dir, "*.txt")) if os.path.isdir(grammar_dir) else []
     if grammar_files:
         print(
-            f"  -> Found {len(grammar_files)} grammar file(s) in '{GRAMMAR_DIR}' "
+            f"  -> Found {len(grammar_files)} grammar file(s) in '{grammar_dir}' "
             f"(repeating {grammar_repeat}x for grammar emphasis)"
         )
         for _ in range(grammar_repeat):
@@ -117,18 +118,19 @@ def merge_raw_data(output_file="data/processed/corpus.txt", grammar_repeat=5):
                 if text:
                     paragraphs.append(text)
     else:
-        print(f"  -> [Notice] No grammar files in '{GRAMMAR_DIR}' yet — add .txt files here!")
+        print(f"  -> [Notice] No text files in '{grammar_dir}' — add .txt files here!")
 
     # ── 2. Transcript files (consolidated into paragraph chunks) ──────────────
-    chunks = _consolidate_from_merged_transcript(MERGED_TRANSCRIPT, SENTENCES_PER_CHUNK)
+    chunks = _consolidate_from_merged_transcript(merged_transcript, SENTENCES_PER_CHUNK)
     if chunks:
         print(
-            f"  -> Consolidated sentences from '{MERGED_TRANSCRIPT}' into {len(chunks):,} paragraph chunks "
+            f"  -> Consolidated sentences from '{merged_transcript}' into {len(chunks):,} paragraph chunks "
             f"({SENTENCES_PER_CHUNK} sentences each)"
         )
         paragraphs.extend(chunks)
     else:
-        print(f"  -> [Notice] No transcripts found in '{MERGED_TRANSCRIPT}'")
+        if os.path.exists(merged_transcript):
+            print(f"  -> [Notice] No transcripts read from '{merged_transcript}'")
 
     if not paragraphs:
         print("Warning: No text found in any data source folder!")
